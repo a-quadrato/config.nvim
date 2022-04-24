@@ -1,6 +1,6 @@
 -- Functional wrapper for pamming custom keybindings
 
-local map = require('utils.init').map
+local map = require("utils.init").map
 
 -- map("n", <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 -- map("n", <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
@@ -30,8 +30,8 @@ map("n", "<Leader>ee", "if err != nil {<CR>log.Fatalf('%+v\n', err)<CR>}<CR><esc
 -- TrimWhitespace
 map("n", "<F2>", ":let _s=@/<Bar>:%s/\\s\\+$//e<Bar>:let @/=_s<Bar><CR>")
 -- Move Selection Up/Down from https://stackoverflow.com/questions/41084565/moving-multiple-lines-in-vim-visual-mode
-map("v", 'J', ":m '>+1<CR>gv=gv",{silent=true})
-map('v', 'K', ":m '<-2<CR>gv=gv",{silent=true})
+map("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
+map("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
 -- Big Fat CoC
 map("n", "<leader>gd", "<Plug>(coc-definition)")
@@ -60,11 +60,11 @@ map("n", "<leader>gu", ":diffget //2<CR>")
 map("n", "<leader>gs", ":G<CR>")
 
 -- Spell-check set to <leader>o, 'o' for 'orthography'
-map("n", "<leader>o",":setlocal spell! spelllang=en_us<CR>")
+map("n", "<leader>o", ":setlocal spell! spelllang=en_us<CR>")
 map("n", "<leader>z", "1z=<CR>")
 
 -- Stop highlighting
-map("n", "<esc><esc>",":noh<CR><esc>",{silent=true})
+map("n", "<esc><esc>", ":noh<CR><esc>", { silent = true })
 
 map("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 map("n", "<leader>q", ":bd<CR>")
@@ -79,9 +79,9 @@ map("n", "<S-Tab>", ":bprevious<CR>")
 -- Quick newlines
 map("", "<S-Enter>", "o<ESC>")
 map("", "<Enter>", "O<ESC>")
-map("n", "<leader>u",":UndotreeShow<CR>")
+map("n", "<leader>u", ":UndotreeShow<CR>")
 
 -- Find them Files
-map("n","<leader>f",":lua require'telescope.builtin'.find_files()<CR>",{silent=true})
-map("n","<leader>/",":lua require'telescope.builtin'.live_grep()<CR>",{silent=true})
-map("n","<leader>g",":lua require'telescope.builtin'.git_files()<CR>",{silent=true})
+map("n", "<leader>f", ":lua require'telescope.builtin'.find_files()<CR>", { silent = true })
+map("n", "<leader>/", ":lua require'telescope.builtin'.live_grep()<CR>", { silent = true })
+map("n", "<leader>g", ":lua require'telescope.builtin'.git_files()<CR>", { silent = true })

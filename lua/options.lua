@@ -4,7 +4,7 @@ local g = vim.g
 --local options = require("core.utils").load_config().options
 
 opt.title = true
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 opt.cul = false -- cursor line
 
 -- Indentline
@@ -21,15 +21,14 @@ opt.hlsearch = true
 opt.ignorecase = true
 opt.incsearch = true
 opt.smartcase = true
-opt.grepprg = 'rg --vimgrep'
+opt.grepprg = "rg --vimgrep"
 
 -- STFU
 opt.errorbells = false
 
 -- Clean stuff
 opt.undofile = true
-opt.undodir = vim.fn.stdpath('data')..'/nvim/undodir'
-
+opt.undodir = vim.fn.stdpath("data") .. "/nvim/undodir"
 
 opt.hidden = true
 opt.mouse = "a"
@@ -39,41 +38,39 @@ opt.number = true
 opt.relativenumber = true
 opt.ruler = false
 
-
 -- disable nvim intro
-opt.shortmess:append "scI"
+opt.shortmess:append("scI")
 
 -- Vim Command Autocompletion
 opt.wildmenu = true
-opt.wildmode = 'longest:list,full'
+opt.wildmode = "longest:list,full"
 
 -- Support for them funny UTF-8 characters
 opt.emoji = true
 
 -- No chars over 80 😠
-opt.colorcolumn="80,120"
+opt.colorcolumn = "80,120"
 
 -- Don't wrap the lines 😠
 opt.wrap = false
 
 -- Don't scroll completely to the bottom
-opt.scrolloff=3
+opt.scrolloff = 3
 
 -- Spelling🇬🇧
 opt.spell = true
-opt.spelllang = 'en_us'
+opt.spelllang = "en_us"
 
 -- Performace
 opt.cursorline = false
 opt.cursorcolumn = false
-opt.scrolljump= 5
+opt.scrolljump = 5
 opt.lazyredraw = false
 -- opt.redrawtime = 10000
 opt.synmaxcol = 180
 -- opt.re = 1
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
-
 
 -- for CoC
 opt.hidden = true
@@ -93,7 +90,6 @@ vim.cmd([[colorscheme gruvbox]])
 g.gruvbox_contrast_dark = "hard"
 opt.background = "dark"
 opt.timeoutlen = 400
-
 
 g.mapleader = " "
 g.gruvbox_invert_selection = "0"
