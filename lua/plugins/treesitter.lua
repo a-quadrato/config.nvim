@@ -1,5 +1,6 @@
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all"
+
 	ensure_installed = { "c", "lua", "rust", "python", "go", "cpp", "yaml", "json" },
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
@@ -27,10 +28,10 @@ require("nvim-treesitter.configs").setup({
 	incremental_selection = {
 		enable = true,
 		keymaps = {
-			init_selection = "<C-n>",
-			node_incremental = "<C-n>",
+			init_selection = "<C-k>",
+			node_incremental = "<C-k>",
 			scope_incremental = "<C-s>",
-			node_decremental = "<C-r>",
+			node_decremental = "<C-j>",
 		},
 	},
 })
