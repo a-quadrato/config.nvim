@@ -91,11 +91,11 @@
   "list.source.grep.command": "rg",
 
   // git settings
-  "git.topRemovedSign.text": "▌",
-  "git.changeRemovedSign.text": "▌",
-  "git.removedSign.text": "▌",
-  "git.addedSign.text": "▌",
-  "git.changedSign.text": "▌",
+  "git.topRemovedSign.text": "‾",
+  "git.changeRemovedSign.text": "≃",
+  "git.removedSign.text": "\uf873", // a fancy -
+  "git.addedSign.text": "\uf914", // a fancy +
+  "git.changedSign.text": "\ufc23", // a fancy ~
 
   // other stuff (language specific)
   "html.autoClosingTags": true,
