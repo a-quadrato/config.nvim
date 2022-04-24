@@ -6,16 +6,29 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup({function (use)
+
   -- Make Packer manage itself
   use { 'nvim-lua/plenary.nvim' }
+
+  -- Lua Functions that you don't have to write yourself
   use { 'wbthomason/packer.nvim' }
-  use { '9mm/vim-closer' }
+
+  -- Easy way to interface with tree-sitter, an incremental parsing system.
   use { 'nvim-treesitter/nvim-treesitter',
   run = ':TSUpdate',
   config = function ()
     require("plugins.treesitter")
   end}
-  use { 'tversteeg/registers.nvim', keys = { { 'n', '"' }, { 'i', '<c-r>' } } }
+
+  -- Better way to show register content
+  use {
+    'tversteeg/registers.nvim',
+    keys = { { 'n', '"' }, { 'i', '<c-r>' } },
+    config = function ()
+      require('plugins.registers').setup()
+    end
+  }
+
   use {
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'},
@@ -28,14 +41,13 @@ return require('packer').startup({function (use)
   -- better QuickFix window for NeoVim
   use { 'kevinhwang91/nvim-bqf' }
 
-
-
   ---------------------------------------------------------------------------
   -- Visuals
   ---------------------------------------------------------------------------
 
+  -- Fancy Icons
   use { 'kyazdani42/nvim-web-devicons' }
-  use { 'luochen1990/rainbow' }
+  -- The one and only true colorscheme: GRUVBOOOOOOX
   use { 'ellisonleao/gruvbox.nvim' }
 
   -- Indentation tracking
@@ -106,14 +118,8 @@ return require('packer').startup({function (use)
     -- keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
   }
 
-  -- FuGITive
-  use { 'tpope/vim-fugitive' }
-
   -- move visual selection
   use { 'Jorengarenar/vim-MvVis'}
-
-  -- run common Unix commands inside Vim
-  use { 'tpope/vim-eunuch' }
 
   -- support for .enditorconfig
   use { 'editorconfig/editorconfig-vim' }
@@ -121,22 +127,38 @@ return require('packer').startup({function (use)
   -- R support for nvim
   use { 'jalvesaq/Nvim-R', branch= 'stable'}
 
+  -----------------------------------------------------------------------------
+  -- Stuff from the allmighty tpope
+  -----------------------------------------------------------------------------
   -- Add,Delete and Change parentheses
   use { 'tpope/vim-surround'}
+  -- Comment and uncomment lines/visual blocks
   use { 'tpope/vim-commentary'}
+  -- run common Unix commands inside Vim
+  use { 'tpope/vim-eunuch' }
+  -- Easily run Git commands from inside Vim
+  use { 'tpope/vim-fugitive' }
 
   -- A cool file explorer
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    }
+    },
+    config = function ()
+      require("plugins.nvim-tree").setup()
+    end
+
   }
   -- Show location in source tree in status line
   use {
     "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter"
+    requires = "nvim-treesitter/nvim-treesitter",
+    config = function ()
+      require('nvim-gps').setup()
+    end
   }
+
   -- Some usefull snippets for a whole bunch of languages
   use { 'honza/vim-snippets' }
 
