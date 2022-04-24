@@ -12,6 +12,24 @@ Simply clone this repository into either `~/.config/neovim`, `~/.neovim`, or `~/
 All dependencies and plugins should install automatically once you run `neovim`
 with this configuration.
 
+## **Dependencies**
+
+A couple of external dependencies are needed for configuration of `neovim` to
+work correctly. Install the following packages with you preferred package
+manager or the language specific one.
+
+### Python
+
+```bash
+pip install pynvim
+```
+
+### Node.js
+
+```bash
+npm install -g neovim
+```
+
 ## **How to Contribute**
 
 1. Clone repo and create a new branch:
