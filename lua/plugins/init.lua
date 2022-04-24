@@ -137,8 +137,11 @@ return require('packer').startup({function (use)
     "SmiteshP/nvim-gps",
     requires = "nvim-treesitter/nvim-treesitter"
   }
+  -- Some usefull snippets for a whole bunch of languages
+  use { 'honza/vim-snippets' }
 
-  use {'honza/vim-snippets'}
+  -- Faster startup time
+  use { 'lewis6991/impatient.nvim' }
 
   if PackerBootstrap then
     require('packer').sync()
