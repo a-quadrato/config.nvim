@@ -11,8 +11,8 @@ if present then
 end
 
 local modules = {
-    "options",
     "plugins",
+    "options",
     "autocmds",
     "mappings",
     "highlight",

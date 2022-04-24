@@ -48,7 +48,8 @@ return require('packer').startup({function (use)
   -- Fancy Icons
   use { 'kyazdani42/nvim-web-devicons' }
   -- The one and only true colorscheme: GRUVBOOOOOOX
-  use { 'ellisonleao/gruvbox.nvim' }
+  use { 'ellisonleao/gruvbox.nvim',
+}
 
   -- Indentation tracking
   use { 'lukas-reineke/indent-blankline.nvim'}
