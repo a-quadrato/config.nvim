@@ -101,6 +101,9 @@ local function setup()
 	-- Use K to show documentation in preview window
 	--nnoremap('K', 'call v:lua.CocShowDocumentation()<CR>', {silent = true})
 	vim.api.nvim_set_keymap("n", "K", ":call v:lua.CocShowDocumentation()<CR>", { noremap = true, silent = true })
+
+	-- Filetype remapping for Ansible
+	vim.g["coc_filetype_map"] = '{"yaml.ansible":"ansible"}'
 end
 
 return {

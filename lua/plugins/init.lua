@@ -176,6 +176,9 @@ return require("packer").startup({
 		-- Faster startup time
 		use({ "lewis6991/impatient.nvim" })
 
+        -- Ansible Plugin
+        use { 'pearofducks/ansible-vim' }
+
 		if PackerBootstrap then
 			require("packer").sync()
 		end
