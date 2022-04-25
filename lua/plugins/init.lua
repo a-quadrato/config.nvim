@@ -117,7 +117,7 @@ return require("packer").startup({
 			requires = { "nvim-lua/plenary.nvim" },
 			wants = { "plenary.nvim" },
 			config = function()
-				require("plugins.telescope")
+				require("plugins.telescope").setup()
 			end,
 			module = "telescope",
 		})
@@ -176,8 +176,19 @@ return require("packer").startup({
 		-- Faster startup time
 		use({ "lewis6991/impatient.nvim" })
 
-        -- Ansible Plugin
-        use { 'pearofducks/ansible-vim' }
+		-- Ansible Plugin
+		use({
+			"pearofducks/ansible-vim",
+			config = function()
+				require("plugins.ansible").setup()
+			end,
+		})
+		use({
+			"mrjones2014/legendary.nvim",
+			config = function()
+				require("plugins.legendary").config()
+			end,
+		})
 
 		if PackerBootstrap then
 			require("packer").sync()
