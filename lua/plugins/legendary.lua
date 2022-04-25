@@ -1,6 +1,3 @@
-local fn = vim.fn
-local map = require("utils.init").map
-
 local function config()
 	require("legendary").setup({
 		-- Include builtins by default, set to false to disable
@@ -29,8 +26,7 @@ local function config()
 		most_recent_item_at_top = true,
 		-- Initial keymaps to bind
 		keymaps = {
-
-			{ "<F1>", ":Legendary<CR>", description = "Show keymaps,commands and autocmds", mode = { "n" } },
+			{ "<F1>", ":Legendary<CR>", description = "Show keymaps, commands and autocmds", mode = { "n" } },
 			{ "<F4>", ":Legendary keymaps<CR>", description = "Show keymaps", mode = { "n", "i", "v" } },
 			{ "<F5>", ":Legendary commands<CR>", description = "Show commands", mode = { "n", "i", "v" } },
 			{ "<F6>", ":Legendary autocmds<CR>", description = "Show autocmds", mode = { "n", "i", "v" } },
@@ -41,15 +37,16 @@ local function config()
 			-- your command tables here
 		},
 		-- Initial augroups and autocmds to bind
-		autocmds = {
-			{
-				"FileType",
-				":TSBufDisable highlight",
-				opts = {
-					pattern = { "yaml.ansible" },
-				},
-			},
-		},
+		-- autocmds = {
+		-- 	{
+		-- 		"BufEnter",
+		-- 		":echo 'helo from automcd'",
+		-- 		description = "autocmd test echo",
+		-- 		opts = {
+		-- 			pattern = { "*" },
+		-- 		},
+		-- 	},
+		-- },
 		which_key = {
 			-- you can put which-key.nvim tables here,
 			-- or alternatively have them auto-register,
@@ -66,7 +63,7 @@ local function config()
 		auto_register_which_key = true,
 		-- settings for the :LegendaryScratch command
 		scratchpad = {
-			-- configure how to show results of evaluated Lua code,
+			-- configure how to show results of evaluaked Lua code,
 			-- either 'print' or 'float'
 			-- Pressing q or <ESC> will close the float
 			display_results = "float",

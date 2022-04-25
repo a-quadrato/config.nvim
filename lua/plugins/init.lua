@@ -1,5 +1,4 @@
 local fn = vim.fn
-print("plugin loaded")
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
 	PackerBootstrap = fn.system({
@@ -25,7 +24,7 @@ return require("packer").startup({
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate",
 			config = function()
-				require("plugins.treesitter")
+				require("plugins.treesitter").config()
 			end,
 		})
 

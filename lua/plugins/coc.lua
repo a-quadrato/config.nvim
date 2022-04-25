@@ -34,7 +34,6 @@ function CocShowDocumentation()
 end
 
 local function setup()
-	print("Setup COC")
 	vim.g.coc_global_extensions = {
 		"@yaegassy/coc-ansible",
 		"coc-clangd",
