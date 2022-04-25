@@ -182,10 +182,22 @@ return require("packer").startup({
 				require("plugins.ansible").setup()
 			end,
 		})
+
+		-- Browse keymaps, commands and autocmds with ease
 		use({
 			"mrjones2014/legendary.nvim",
+			requires = { "stevearc/dressing.nvim" },
 			config = function()
 				require("plugins.legendary").config()
+			end,
+		})
+
+		-- better vim.ui interface with Telescope 🔭 support
+		use({
+			"stevearc/dressing.nvim",
+			requires = { "nvim-telescope/telescope.nvim" },
+			config = function()
+				require("plugins.dressing").setup()
 			end,
 		})
 
