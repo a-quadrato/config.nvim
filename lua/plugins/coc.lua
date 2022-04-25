@@ -1,4 +1,5 @@
 local fn = vim.fn
+local map = require("utils.init").map
 local termcodes = require("utils.init").termcodes
 
 -- thank you: https://github.com/smauel/dotfiles/blob/master/config/nvim.bk/lua/config/coc.lua
@@ -33,6 +34,7 @@ function CocShowDocumentation()
 end
 
 local function setup()
+	print("Setup COC")
 	vim.g.coc_global_extensions = {
 		"@yaegassy/coc-ansible",
 		"coc-clangd",
@@ -102,6 +104,17 @@ local function setup()
 	--nnoremap('K', 'call v:lua.CocShowDocumentation()<CR>', {silent = true})
 	vim.api.nvim_set_keymap("n", "K", ":call v:lua.CocShowDocumentation()<CR>", { noremap = true, silent = true })
 
+	map("n", "<leader>gd", "<Plug>(coc-definition)")
+	map("n", "<leader>gy", "<Plug>(coc-type-definition)")
+	map("n", "<leader>gi", "<Plug>(coc-implementation)")
+	map("n", "<leader>gr", "<Plug>(coc-references)")
+	map("n", "<leader>rr", "<Plug>(coc-rename)")
+	map("n", "g[", "<Plug>(coc-diagnostic-prev)")
+	map("n", "g]", "<Plug>(coc-diagnostic-next)")
+	map("n", "<leader>gp", "<Plug>(coc-diagnostic-prev-error)", { silent = true })
+	map("n", "<leader>gn", "<Plug>(coc-diagnostic-next-error)", { silent = true })
+	map("n", "<leader>cr", ":CocRestart")
+	map("n", "<leader>s", ":call CocAction('format')<CR>")
 	-- Filetype remapping for Ansible
 	vim.g["coc_filetype_map"] = '{"yaml.ansible":"ansible"}'
 end
