@@ -115,11 +115,10 @@ return require("packer").startup({
 		use({
 			"nvim-telescope/telescope.nvim",
 			requires = { "nvim-lua/plenary.nvim" },
-			wants = { "plenary.nvim" },
 			config = function()
 				require("plugins.telescope").setup()
 			end,
-			module = "telescope",
+			-- module = "telescope",
 		})
 
 		-- Documentation

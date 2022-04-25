@@ -1,6 +1,6 @@
 local map = require("utils.init").map
+
 local function setup()
-    print("called TELESCOPE config ")
 	require("telescope").setup({
 		defaults = {
 			-- Default configuration for telescope goes here:
@@ -35,11 +35,9 @@ local function setup()
 	})
 
 	-- Find them Files
-    print("TELESCOPE mappings")
 	map("n", "<leader>f", ":lua require'telescope.builtin'.find_files()<CR>", { silent = true })
 	map("n", "<leader>/", ":lua require'telescope.builtin'.live_grep()<CR>", { silent = true })
 	map("n", "<leader>g", ":lua require'telescope.builtin'.git_files()<CR>", { silent = true })
-    print("TELESCOPE mappings done")
 end
 
 return {
