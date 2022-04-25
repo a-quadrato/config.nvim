@@ -22,4 +22,4 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Run Luacheck
-        uses: RagedUnicorn/action-luacheck@[version]
+        uses: RagedUnicorn/action-luacheck@v1.0.0
