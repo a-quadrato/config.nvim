@@ -28,7 +28,7 @@ opt.errorbells = false
 
 -- Clean stuff
 opt.undofile = true
-opt.undodir = vim.fn.stdpath("data") .. "/nvim/undodir"
+opt.undodir = vim.fn.stdpath "data" .. "/nvim/undodir"
 
 opt.hidden = true
 opt.mouse = "a"
@@ -39,7 +39,7 @@ opt.relativenumber = true
 opt.ruler = false
 
 -- disable nvim intro
-opt.shortmess:append("scI")
+opt.shortmess:append "scI"
 
 -- Vim Command Autocompletion
 opt.wildmenu = true
@@ -86,7 +86,7 @@ opt.tabstop = 4
 opt.termguicolors = true
 opt.showtabline = 2
 
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd [[colorscheme gruvbox]]
 g.gruvbox_contrast_dark = "hard"
 opt.background = "dark"
 opt.timeoutlen = 400

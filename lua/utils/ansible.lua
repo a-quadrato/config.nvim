@@ -21,10 +21,8 @@ local function isAnsible(path, bufnr)
   if vim.fn.search("\\C^#include <[^>.]\\+>$", "nw") ~= 0 then
     return true
   end
-
-
 end
 
 return {
-	isAnsible = isAnsible,
+  isAnsible = isAnsible,
 }

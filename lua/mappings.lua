@@ -61,4 +61,3 @@ map("n", "<S-Tab>", ":bprevious<CR>")
 map("", "<S-Enter>", "o<ESC>")
 map("", "<Enter>", "O<ESC>")
 map("n", "<leader>u", ":UndotreeShow<CR>")
-
