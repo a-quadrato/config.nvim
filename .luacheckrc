@@ -2,7 +2,6 @@
 
 stds.nvim = {
 	globals = {
-		"lvim",
 		vim = { fields = { "g" } },
 		os = { fields = { "capture" } },
 	},

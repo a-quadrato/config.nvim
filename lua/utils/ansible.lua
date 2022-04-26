@@ -17,7 +17,7 @@
 --   return 0
 
 -- Determines if a yaml file is Ansible or not
-local function isAnsible(path, bufnr)
+local function isAnsible()
   if vim.fn.search("\\C^#include <[^>.]\\+>$", "nw") ~= 0 then
     return true
   end

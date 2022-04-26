@@ -7,6 +7,7 @@ local map = require("utils.init").map
 
 -- map("n", <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 -- map("n", <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
+
 -- Window Commands
 map("n", "<leader>h", ":wincmd h<CR>")
 map("n", "<leader>j", ":wincmd j<CR>")

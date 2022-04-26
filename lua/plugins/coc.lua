@@ -8,7 +8,7 @@ local function check_back_space()
   return (col == 0 or vim.api.nvim_get_current_line():sub(col, col):match "%s") and true
 end
 
-function CocSmartTab()
+local function CocSmartTab()
   if fn.pumvisible() == 1 then
     return termcodes "<C-n>"
   elseif fn["coc#expandableOrJumpable"]() == 1 then
@@ -23,7 +23,7 @@ function CocSmartTab()
   end
 end
 
-function CocShowDocumentation()
+local function CocShowDocumentation()
   if fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
     vim.cmd("h " .. fn.expand "<cword>")
   elseif fn["coc#rpc#ready"]() then
@@ -75,7 +75,12 @@ local function setup()
   -- Else, if the character before the cursor isn't whitespace, put a Tab.
   -- Else, refresh the completion list
   --inoremap('<TAB>', 'v:lua.CocSmartTab()', {silent = true, expr = true})
-  vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.CocSmartTab()", { expr = true, noremap = true, silent = true })
+  vim.api.nvim_set_keymap(
+    "i",
+    "<Tab>",
+    "v:lua.require('plugins.coc').CocSmartTab()",
+    { expr = true, noremap = true, silent = true }
+  )
 
   -- Shift-Tab for cycling backwards through matches in a completion popup
   --inoremap('<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<C-h>"', {silent = true, expr = true})
@@ -101,7 +106,12 @@ local function setup()
 
   -- Use K to show documentation in preview window
   --nnoremap('K', 'call v:lua.CocShowDocumentation()<CR>', {silent = true})
-  vim.api.nvim_set_keymap("n", "K", ":call v:lua.CocShowDocumentation()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap(
+    "n",
+    "K",
+    ":call v:lua.require('plugins.coc').CocShowDocumentation()<CR>",
+    { noremap = true, silent = true }
+  )
 
   map("n", "<leader>gd", "<Plug>(coc-definition)")
   map("n", "<leader>gy", "<Plug>(coc-type-definition)")
@@ -120,4 +130,6 @@ end
 
 return {
   setup = setup,
+  CocSmartTab = CocSmartTab,
+  CocShowDocumentation = CocShowDocumentation,
 }

@@ -22,10 +22,10 @@ repos:
         entry: stylua
         types: [lua]
         args: ["-"]
-      # spits out way to much stuff. for now.
-      # - id: luacheck
-      #   name: luacheck
-      #   language: system
-      #   entry: luacheck
-      #   types: [lua]
-      #   args: [.]
+      - id: luacheck
+        name: luacheck
+        language: system
+        entry: luacheck
+        types: [lua]
+        args: [.]
+        exclude: "plugin/*"

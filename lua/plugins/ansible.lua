@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 -- ansible-vim configuration
 -----------------------------------------------------------------------------
-local au = vim.api.nvim_create_autocmd
-local utils = require "utils.init"
+-- local au = vim.api.nvim_create_autocmd
+-- local utils = require "utils.init"
 
 local function setup()
   -- enable Spelling for text files
