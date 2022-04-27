@@ -1,6 +1,7 @@
 {
   "coc.preferences.snippetStatusText": "\u24c8",
   "coc.preferences.enableMessageDialog": true,
+  "suggest.labelMaxLength": 60,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "html",
