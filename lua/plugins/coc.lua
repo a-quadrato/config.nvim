@@ -124,6 +124,7 @@ local function setup()
   map("n", "<leader>gn", "<Plug>(coc-diagnostic-next-error)", { silent = true })
   map("n", "<leader>cr", ":CocRestart")
   map("n", "<leader>s", ":call CocAction('format')<CR>")
+  map("n", "<leader>cf", ":CocFix<CR>")
   -- Filetype remapping for Ansible
   vim.g["coc_filetype_map"] = '{"yaml.ansible":"ansible"}'
 end
