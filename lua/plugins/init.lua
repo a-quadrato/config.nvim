@@ -201,6 +201,14 @@ return require("packer").startup {
       end,
     }
 
+    -- An undo history visualizer
+    use {
+      "mbbill/undotree",
+      config = function()
+        require("plugins.undotree").config()
+      end,
+    }
+
     if PackerBootstrap then
       require("packer").sync()
     end

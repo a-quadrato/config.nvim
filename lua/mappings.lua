@@ -20,7 +20,6 @@ map("n", "<leader>-", ":vertical resize -5<CR>")
 map("n", "<leader>rp", ":resize 100<CR>")
 
 -- Usefull stuff
-map("n", "<leader>u", ":UndotreeShow<CR>")
 map("n", "<leader>pv", ":wincmd v<bar> :Ex <bar> :vertical resize 30<CR>")
 map("n", "<Leader>ps", ":Rg<SPACE>")
 map("n", "<C-p>", ":GFiles<CR>")
@@ -61,4 +60,3 @@ map("n", "<S-Tab>", ":bprevious<CR>")
 -- Quick newlines
 map("", "<S-Enter>", "o<ESC>")
 map("", "<Enter>", "O<ESC>")
-map("n", "<leader>u", ":UndotreeShow<CR>")
