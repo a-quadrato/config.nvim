@@ -28,4 +28,3 @@ repos:
         entry: luacheck
         types: [lua]
         args: [.]
-        exclude: "plugin/*"
