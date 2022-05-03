@@ -1,5 +1,6 @@
 <!-- markdownlint-disable first-line-heading -->
 
+[![Actions Status: CI](https://github.com/a-quadrato/config.nvim/workflows/CI/badge.svg)](https://github.com/a-quadrato/config.nvim/actions/workflows/main.yml?query=workflow%3ACI)
 ![config.ncim logo](config.nvim.png)
 
 `config.nvim` is the easiest way to turn your neovim into a terminal editor on
