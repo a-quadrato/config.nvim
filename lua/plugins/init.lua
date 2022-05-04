@@ -201,6 +201,14 @@ return require("packer").startup {
       end,
     }
 
+    use {
+      "lewis6991/nvim-treesitter-context",
+      requires = "nvim-treesitter",
+      config = function()
+        require("plugins.context").config()
+      end,
+    }
+
     if PackerBootstrap then
       require("packer").sync()
     end
