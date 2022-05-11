@@ -209,6 +209,14 @@ return require("packer").startup {
       end,
     }
 
+    -- Nice and fast vertical and horizontal movement
+    use {
+      "ggandor/lightspeed.nvim",
+      config = function()
+        require("plugins.lightspeed").config()
+      end,
+    }
+
     if PackerBootstrap then
       require("packer").sync()
     end
