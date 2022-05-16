@@ -38,14 +38,14 @@ return require("packer").startup {
       end,
     }
 
-    use {
-      "lewis6991/gitsigns.nvim",
-      requires = { "nvim-lua/plenary.nvim" },
-      -- tag = 'release' -- To use the latest release
-      config = function()
-        require("gitsigns").setup()
-      end,
-    }
+    -- use {
+    --   "lewis6991/gitsigns.nvim",
+    --   requires = { "nvim-lua/plenary.nvim" },
+    --   -- tag = 'release' -- To use the latest release
+    --   config = function()
+    --     require("gitsigns").setup()
+    --   end,
+    -- }
 
     -- better QuickFix window for NeoVim
     use { "kevinhwang91/nvim-bqf" }

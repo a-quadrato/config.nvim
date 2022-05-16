@@ -97,6 +97,11 @@
   "git.removedSign.text": "\uf873", // a fancy -
   "git.addedSign.text": "\uf914", // a fancy +
   "git.changedSign.text": "\ufc23", // a fancy ~
+  "git.addedSign.hlGroup": "DiffAdd",
+  "git.changedSign.hlGroup": "DiffChange",
+  "git.removedSign.hlGroup": "DiffDelete",
+  "git.topRemovedSign.hlGroup": "DiffDelete",
+  "git.changeRemovedSign.hlGroup": "DiffChange",
 
   // other stuff (language specific)
   "html.autoClosingTags": true,

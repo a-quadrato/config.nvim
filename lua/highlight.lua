@@ -8,9 +8,9 @@ vim.highlight.create("CursorLineNr", { gui = "bold" }) -- make relativenumber bo
 vim.highlight.create("SpellBad", { guifg = "NONE", gui = "bold,undercurl" }) -- misspelled words
 
 -- colors for git, especially gutter
-vim.highlight.create("DiffAdd", { guibg = "#3C3836", guifg = "#b8bb26", gui = "bold", cterm = "bold" })
-vim.highlight.create("DiffChange", { guibg = "#3C3836", guifg = "#fabd2f", gui = "bold", cterm = "bold" })
-vim.highlight.create("DiffRemoved", { guibg = "#3C3836", guifg = "#fb4934", gui = "bold", cterm = "bold" })
+vim.highlight.create("DiffAdd", { guibg = "#1D2021", guifg = "#b8bb26", gui = "bold", cterm = "bold" })
+vim.highlight.create("DiffChange", { guibg = "#1D2021", guifg = "#fabd2f", gui = "bold", cterm = "bold" })
+vim.highlight.create("DiffRemoved", { guibg = "#1D2021", guifg = "#fb4934", gui = "bold", cterm = "bold" })
 
 -- coc multi cursor highlight color
 vim.highlight.create("CocCursorRange", { guibg = "#b16286", guifg = "#ebdbb2" })
