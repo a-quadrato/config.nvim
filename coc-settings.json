@@ -1,6 +1,8 @@
 {
   "coc.preferences.snippetStatusText": "\u24c8",
   "coc.preferences.enableMessageDialog": true,
+  "diagnostic.virtualTextLineSeparator": " \\ ",
+  "diagnostic.virtualTextLines": 10,
   "suggest.labelMaxLength": 60,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
@@ -10,7 +12,8 @@
     "markdown",
     "python",
     "golang",
-    "rust"
+    "rust",
+    "latex"
   ],
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
@@ -95,7 +98,7 @@
   "git.topRemovedSign.text": "‾",
   "git.changeRemovedSign.text": "≃",
   "git.removedSign.text": "\uf873", // a fancy -
-  "git.addedSign.text": "\uf914", // a fancy +
+  "git.addedSign.text": "+", // a fancy +
   "git.changedSign.text": "\ufc23", // a fancy ~
   "git.addedSign.hlGroup": "DiffAdd",
   "git.changedSign.hlGroup": "DiffChange",
@@ -127,12 +130,12 @@
   "yaml.schemaStore.enable": false,
   // a bunch of Ansible schemas. These do work well but file recognition is not great
   "yaml.schemas": {
-    "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/definitions/tasks": [
-      "**/tasks/*.yaml",
-      "**/tasks/*.yml",
-      "**/handlers/*.yml",
-      "**/handlers/*.yaml"
-    ],
+    //   "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/definitions/tasks": [
+    //      "**/tasks/*.yaml",
+    //      "**/tasks/*.yml",
+    //     "**/handlers/*.yml",
+    //     "**/handlers/*.yaml"
+    //  ],
     "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/definitions/playbook": [
       "**/infra/*.yaml",
       "**/ansible/*.yml"
@@ -163,5 +166,9 @@
   "python.formatting.autopep8Args": ["--ignore=E402"],
 
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.0/clangd_14.0.0/bin/clangd",
-  "ansible.enable": true
+  "ansible.enable": true,
+
+  "sql.database": "postgresql",
+  "sql.formatOptions": { "--keywords": "upper" },
+  "golines.path": "/home/botand/.local/share/go/bin/golines"
 }

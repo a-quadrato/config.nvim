@@ -1,16 +1,30 @@
-vim.highlight.create("ColorColumn", { ctermbg = 0, guibg = "#282828" })
-vim.highlight.create("Pmenu", { guibg = "#1d2021", guifg = "white" })
-vim.highlight.create("Comment", { gui = "italic", cterm = "italic" }) -- popup menu colors
-vim.highlight.create("Search", { guibg = "#b16286", guifg = "#ebdbb2" }) -- search string highlight color
-vim.highlight.create("NonText", { guifg = "#3C3836" }) -- mask ~ on empty lines
--- vim.highlight.clear('CursorLineNr')                           -- use the theme color for relativenumber
-vim.highlight.create("CursorLineNr", { gui = "bold" }) -- make relativenumber bol
-vim.highlight.create("SpellBad", { guifg = "NONE", gui = "bold,undercurl" }) -- misspelled words
+-- vim.highlight.create("ColorColumn", { ctermbg = 0, guibg = "#282828" })
+-- vim.highlight.create("Pmenu", { guibg = "#1d2021", guifg = "white" })
+-- vim.highlight.create("Comment", { gui = "italic", cterm = "italic" }) -- popup menu colors
+-- vim.highlight.create("Search", { guibg = "#b16286", guifg = "#ebdbb2" }) -- search string highlight color
+-- vim.highlight.create("NonText", { guifg = "#3C3836" }) -- mask ~ on empty lines
+-- -- vim.highlight.clear('CursorLineNr')                           -- use the theme color for relativenumber
+-- vim.highlight.create("CursorLineNr", { gui = "bold" }) -- make relativenumber bol
+-- vim.highlight.create("SpellBad", { guifg = "NONE", gui = "bold,undercurl" }) -- misspelled words
 
--- colors for git, especially gutter
-vim.highlight.create("DiffAdd", { guibg = "#1D2021", guifg = "#b8bb26", gui = "bold", cterm = "bold" })
-vim.highlight.create("DiffChange", { guibg = "#1D2021", guifg = "#fabd2f", gui = "bold", cterm = "bold" })
-vim.highlight.create("DiffRemoved", { guibg = "#1D2021", guifg = "#fb4934", gui = "bold", cterm = "bold" })
+-- -- colors for git, especially gutter
+-- vim.highlight.create("DiffAdd", { guibg = "#1D2021", guifg = "#b8bb26", gui = "bold", cterm = "bold" })
+-- vim.highlight.create("DiffChange", { guibg = "#1D2021", guifg = "#fabd2f", gui = "bold", cterm = "bold" })
+-- vim.highlight.create("DiffRemoved", { guibg = "#1D2021", guifg = "#fb4934", gui = "bold", cterm = "bold" })
 
 -- coc multi cursor highlight color
-vim.highlight.create("CocCursorRange", { guibg = "#b16286", guifg = "#ebdbb2" })
+-- TODO: Check if HL looks good and change for the rest of the coc groups
+-- *CocFadeOut* for faded out text, such as for highlighting unnecessary code.
+-- *CocErrorSign* for error signs.
+-- *CocWarningSign* for warning signs.
+-- *CocInfoSign* for information signs.
+-- *CocHintSign* for hint signs.
+-- *CocErrorVirtualText* for error virtual text.
+-- *CocWarningVirtualText* for warning virtual text.
+-- *CocInfoVirtualText* for information virtual text.
+-- *CocHintVirtualText* for hint virtual text.
+-- *CocErrorHighlight* for error code range.
+-- *CocWarningHighlight* for warning code range.
+-- *CocInfoHighlight* for information code range.
+-- *CocHintHighlight* for hint code range.
+-- *CocDeprecatedHighlight* for deprecated code range, links to

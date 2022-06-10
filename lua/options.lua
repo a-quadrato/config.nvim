@@ -57,7 +57,7 @@ opt.wrap = false
 -- Don't scroll completely to the bottom
 opt.scrolloff = 3
 
--- Spelling🇬🇧
+-- Spelling 🇬🇧
 opt.spell = true
 opt.spelllang = "en_us"
 
@@ -85,10 +85,6 @@ opt.splitright = true
 opt.tabstop = 4
 opt.termguicolors = true
 opt.showtabline = 2
-
-vim.cmd [[colorscheme gruvbox]]
-g.gruvbox_contrast_dark = "hard"
-opt.background = "dark"
 opt.timeoutlen = 400
 
 g.mapleader = " "

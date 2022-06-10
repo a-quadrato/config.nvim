@@ -15,7 +15,6 @@ local modules = {
   "options",
   "autocmds",
   "mappings",
-  "highlight",
 }
 
 for _, module in ipairs(modules) do

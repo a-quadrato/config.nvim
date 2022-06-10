@@ -57,7 +57,12 @@ return require("packer").startup {
     -- Fancy Icons
     use { "kyazdani42/nvim-web-devicons" }
     -- The one and only true colorscheme: GRUVBOOOOOOX
-    use { "ellisonleao/gruvbox.nvim" }
+    use {
+      "ellisonleao/gruvbox.nvim",
+      config = function()
+        require "plugins.gruvbox"
+      end,
+    }
 
     -- Indentation tracking
     use { "lukas-reineke/indent-blankline.nvim" }
@@ -149,6 +154,7 @@ return require("packer").startup {
     use { "tpope/vim-eunuch" }
     -- Easily run Git commands from inside Vim
     use { "tpope/vim-fugitive" }
+    use { "tpope/vim-dispatch" }
 
     -- A cool file explorer
     use {
