@@ -57,7 +57,7 @@ opt.wrap = false
 -- Don't scroll completely to the bottom
 opt.scrolloff = 3
 
--- Spelling🇬🇧
+-- Spelling 🇬🇧
 opt.spell = true
 opt.spelllang = "en_us"
 
@@ -85,10 +85,6 @@ opt.splitright = true
 opt.tabstop = 4
 opt.termguicolors = true
 opt.showtabline = 2
-
-vim.cmd [[colorscheme gruvbox]]
-g.gruvbox_contrast_dark = "hard"
-opt.background = "dark"
 opt.timeoutlen = 400
 
 g.mapleader = " "
@@ -97,6 +93,6 @@ g.gruvbox_invert_selection = "0"
 g.coc_snippet_next = "<Tab>"
 g.coc_snippet_prev = "<S-Tab>"
 
--- -- Disable vim FileType matching
--- g.do_filetype_lua = 1
--- g.did_load_filetypes = 0
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldlevelstart = 99
