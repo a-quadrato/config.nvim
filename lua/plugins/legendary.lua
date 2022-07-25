@@ -26,10 +26,10 @@ local function config()
     most_recent_item_at_top = true,
     -- Initial keymaps to bind
     keymaps = {
-      { "<F1>", ":Legendary<CR>", description = "Show keymaps, commands and autocmds", mode = { "n" } },
-      { "<F4>", ":Legendary keymaps<CR>", description = "Show keymaps", mode = { "n", "i", "v" } },
-      { "<F5>", ":Legendary commands<CR>", description = "Show commands", mode = { "n", "i", "v" } },
-      { "<F6>", ":Legendary autocmds<CR>", description = "Show autocmds", mode = { "n", "i", "v" } },
+      -- { "<F1>", ":Legendary<CR>", description = "Show keymaps, commands and autocmds", mode = { "n" } },
+      -- { "<F4>", ":Legendary keymaps<CR>", description = "Show keymaps", mode = { "n", "i", "v" } },
+      -- { "<F5>", ":Legendary commands<CR>", description = "Show commands", mode = { "n", "i", "v" } },
+      -- { "<F6>", ":Legendary autocmds<CR>", description = "Show autocmds", mode = { "n", "i", "v" } },
       -- your keymap tables here
     },
     -- Initial commands to bind

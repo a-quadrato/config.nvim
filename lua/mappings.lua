@@ -27,7 +27,8 @@ map("n", "<Leader>pf", ":Files<CR>")
 map("n", "<Leader><CR>", ":so ~/.config/nvim/init.vim<CR>")
 map("n", "<Leader>+", ":vertical resize +5<CR>")
 map("n", "<Leader>-", ":vertical resize -5<CR>")
-map("n", "<Leader>rp", ":resize 100<CR")
+map("n", "<C-f>", "<C-w><") -- decrease width
+map("n", "<C-j>", "<C-w>>") -- increase width
 map("n", "<Leader>ee", "if err != nil {<CR>log.Fatalf('%+v\n', err)<CR>}<CR><esc>kkI<esc>")
 
 -- TrimWhitespace

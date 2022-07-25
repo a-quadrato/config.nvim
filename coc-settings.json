@@ -130,21 +130,15 @@
   "yaml.schemaStore.enable": false,
   // a bunch of Ansible schemas. These do work well but file recognition is not great
   "yaml.schemas": {
-    //   "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/definitions/tasks": [
-    //      "**/tasks/*.yaml",
-    //      "**/tasks/*.yml",
-    //     "**/handlers/*.yml",
-    //     "**/handlers/*.yaml"
-    //  ],
-    "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/definitions/playbook": [
-      "**/infra/*.yaml",
-      "**/ansible/*.yml"
-    ],
-    "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-vars.json": [
-      "**/defaults/*.yaml",
-      "**/defaults/*.yml"
-    ],
-    "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-galaxy.json": "**/@(ansible|molecule)/**/requirements.yml",
+    //    "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/definitions/playbook": [
+    //      "**/infra/*.yaml",
+    //      "**/ansible/*.yml"
+    //    ],
+    //    "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-vars.json": [
+    //      "**/defaults/*.yaml",
+    //      "**/defaults/*.yml"
+    //    ],
+    //    "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-galaxy.json": "**/@(ansible|molecule)/**/requirements.yml",
     "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "docker-compose.@(yaml|yml)",
     "https://json.schemastore.org/pre-commit-config.json": ".pre-commit-config.@(yaml|yml)"
   },

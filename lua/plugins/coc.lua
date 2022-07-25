@@ -70,6 +70,11 @@ local function setup()
     "coc-yank",
   }
 
+  -- Filetype remapping for Ansible
+  -- vim.g["coc_filetype_map"] = "{'yaml.ansible':'ansible',}"
+end
+
+local function config()
   -- When popup menu is visible, tab goes to next entry.
   -- Else, if the cursor is in an active snippet, tab between fields.
   -- Else, if the character before the cursor isn't whitespace, put a Tab.
@@ -125,12 +130,11 @@ local function setup()
   map("n", "<leader>cr", ":CocRestart")
   map("n", "<leader>s", ":call CocAction('format')<CR>")
   map("n", "<leader>cf", ":CocFix<CR>")
-  -- Filetype remapping for Ansible
-  vim.g["coc_filetype_map"] = '{"yaml.ansible":"ansible"}'
 end
 
 return {
   setup = setup,
+  config = config,
   CocSmartTab = CocSmartTab,
   CocShowDocumentation = CocShowDocumentation,
 }

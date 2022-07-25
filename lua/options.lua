@@ -43,7 +43,7 @@ opt.shortmess:append "scI"
 
 -- Vim Command Autocompletion
 opt.wildmenu = true
-opt.wildmode = "longest:list,full"
+opt.wildmode = "longest:full,full"
 
 -- Support for them funny UTF-8 characters
 opt.emoji = true
@@ -92,6 +92,10 @@ g.gruvbox_invert_selection = "0"
 
 g.coc_snippet_next = "<Tab>"
 g.coc_snippet_prev = "<S-Tab>"
+
+-- Do not source the default filetype.vim - we use filetype.nvim
+g.did_load_filetypes = 0
+g.do_filetype_lua = 1
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
