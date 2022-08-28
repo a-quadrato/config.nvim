@@ -1,3 +1,4 @@
+local map = require("utils.init").map
 local function setup()
   -- setup with all defaults
   -- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -19,7 +20,7 @@ local function setup()
       hide_root_folder = false,
       side = "left",
       preserve_window_proportions = false,
-      number = false,
+      number = true,
       relativenumber = false,
       signcolumn = "yes",
       mappings = {
@@ -31,11 +32,11 @@ local function setup()
     },
     renderer = {
       indent_markers = {
-        enable = false,
+        enable = true,
         icons = {
-          corner = "└ ",
-          edge = "│ ",
-          none = "  ",
+          corner = "└",
+          edge = "│",
+          none = " ",
         },
       },
       icons = {
@@ -72,7 +73,7 @@ local function setup()
       exclude = {},
     },
     git = {
-      enable = true,
+      enable = false,
       ignore = true,
       timeout = 400,
     },
@@ -113,6 +114,7 @@ local function setup()
       },
     },
   }
+  map("", "F5", ":NvimTreeToggle<CR>")
 end
 
 return {

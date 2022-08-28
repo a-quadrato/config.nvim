@@ -20,6 +20,13 @@ return require("packer").startup {
     -- Lua Functions that you don't have to write yourself
     use { "wbthomason/packer.nvim" }
 
+    -- Better/Faster FileType detection
+    use {
+      "nathom/filetype.nvim",
+      setup = function()
+        require("plugins.filetype").setup()
+      end,
+    }
     -- Easy way to interface with tree-sitter, an incremental parsing system.
     use {
       "nvim-treesitter/nvim-treesitter",
@@ -103,6 +110,8 @@ return require("packer").startup {
     -- CMAKE syntax support
     use { "pboettch/vim-cmake-syntax" }
 
+    -- run common Unix commands inside Vim
+    -- use { "tpope/vim-eunuch" }
     ---------------------------------------------------------------------------
     -- Functionality
     ---------------------------------------------------------------------------
@@ -111,8 +120,11 @@ return require("packer").startup {
     use {
       "neoclide/coc.nvim",
       branch = "release",
-      config = function()
+      setup = function()
         require("plugins.coc").setup()
+      end,
+      config = function()
+        require("plugins.coc").config()
       end,
     }
 
@@ -150,8 +162,6 @@ return require("packer").startup {
     use { "tpope/vim-surround" }
     -- Comment and uncomment lines/visual blocks
     use { "tpope/vim-commentary" }
-    -- run common Unix commands inside Vim
-    use { "tpope/vim-eunuch" }
     -- Easily run Git commands from inside Vim
     use { "tpope/vim-fugitive" }
     use { "tpope/vim-dispatch" }
@@ -184,6 +194,8 @@ return require("packer").startup {
     -- Ansible Plugin
     use {
       "pearofducks/ansible-vim",
+      requires = { "nvim-treesitter/nvim-treesitter", "neoclide/coc.nvim" },
+      ft = { "yml", "yaml" },
       config = function()
         require("plugins.ansible").setup()
       end,
@@ -220,6 +232,14 @@ return require("packer").startup {
       "ggandor/lightspeed.nvim",
       config = function()
         require("plugins.lightspeed").config()
+      end,
+    }
+
+    -- Fancy colors
+    use {
+      "norcalli/nvim-colorizer.lua",
+      setup = function()
+        require("colorizer").setup()
       end,
     }
 
