@@ -1,4 +1,3 @@
-local fn = vim.fn
 local map = require("utils.init").map
 local termcodes = require("utils.init").termcodes
 
@@ -9,27 +8,28 @@ local function check_back_space()
 end
 
 local function CocSmartTab()
-  if fn.pumvisible() == 1 then
-    return termcodes "<C-n>"
-  elseif fn["coc#expandableOrJumpable"]() == 1 then
+  if vim.fn["coc#pum#visible"]() == 1 then
+    vim.fn["coc#pum#next"](1)
+    return termcodes ""
+  elseif vim.fn["coc#expandableOrJumpable"]() == 1 then
     return termcodes "<C-r>" .. [[=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])]] .. termcodes "<CR>"
   else
     local status, result = pcall(check_back_space)
     if status and result then
       return termcodes "<Tab>"
     else
-      return fn["coc#refresh"]()
+      return vim.fn["coc#refresh"]()
     end
   end
 end
 
 local function CocShowDocumentation()
-  if fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
-    vim.cmd("h " .. fn.expand "<cword>")
-  elseif fn["coc#rpc#ready"]() then
-    fn.CocActionAsync "doHover"
+  if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
+    vim.cmd("h " .. vim.fn.expand "<cword>")
+  elseif vim.fn["coc#rpc#ready"]() then
+    vim.fn.CocActionAsync "doHover"
   else
-    vim.cmd("!" .. vim.o.keywordprg .. " " .. fn.expand "<cword>")
+    vim.cmd("!" .. vim.o.keywordprg .. " " .. vim.fn.expand "<cword>")
   end
 end
 
@@ -69,17 +69,15 @@ local function setup()
     "coc-yaml",
     "coc-yank",
   }
-
-  -- Filetype remapping for Ansible
-  -- vim.g["coc_filetype_map"] = "{'yaml.ansible':'ansible',}"
 end
 
 local function config()
+  -- For more info see :h coc-completion and :h coc-completion-example
+
   -- When popup menu is visible, tab goes to next entry.
   -- Else, if the cursor is in an active snippet, tab between fields.
   -- Else, if the character before the cursor isn't whitespace, put a Tab.
   -- Else, refresh the completion list
-  --inoremap('<TAB>', 'v:lua.CocSmartTab()', {silent = true, expr = true})
   vim.api.nvim_set_keymap(
     "i",
     "<Tab>",
@@ -88,11 +86,10 @@ local function config()
   )
 
   -- Shift-Tab for cycling backwards through matches in a completion popup
-  --inoremap('<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<C-h>"', {silent = true, expr = true})
   vim.api.nvim_set_keymap(
     "i",
     "<S-Tab>",
-    'pumvisible() ? "\\<C-p>" : "\\<C-h>"',
+    'coc#pum#visible() ? coc#pum#prev(1): "\\<C-h>"',
     { expr = true, noremap = true, silent = true }
   )
 
@@ -101,7 +98,7 @@ local function config()
   vim.api.nvim_set_keymap(
     "i",
     "<CR>",
-    'pumvisible() ? "\\<C-y>" : "\\<CR>"',
+    'coc#pum#visible() && coc#pum#info()["index"] != -1 ? coc#pum#confirm() : "\\<C-g>u\\<CR>\\<c-r>=coc#on_enter()\\<CR>"',
     { expr = true, noremap = true, silent = true }
   )
 

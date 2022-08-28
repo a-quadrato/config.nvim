@@ -32,11 +32,11 @@ local function setup()
     },
     renderer = {
       indent_markers = {
-        enable = false,
+        enable = true,
         icons = {
-          corner = "└ ",
-          edge = "│ ",
-          none = "  ",
+          corner = "└",
+          edge = "│",
+          none = " ",
         },
       },
       icons = {
