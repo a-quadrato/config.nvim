@@ -1,9 +1,6 @@
 {
   "coc.preferences.snippetStatusText": "\u24c8",
   "coc.preferences.enableMessageDialog": true,
-  "diagnostic.virtualTextLineSeparator": " \\ ",
-  "diagnostic.virtualTextLines": 10,
-  "suggest.labelMaxLength": 60,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "html",
@@ -12,7 +9,7 @@
     "markdown",
     "python",
     "golang",
-    "rust",
+    "rust-analyzer",
     "latex"
   ],
   "sumneko-lua.enable": true,
@@ -51,6 +48,11 @@
   "suggest.triggerAfterInsertEnter": true,
   "suggest.timeout": 2000,
   "suggest.minTriggerInputLength": 1,
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
+  "suggest.labelMaxLength": 60,
   "suggest.completionItemKindLabels": {
     "function": "\uf794",
     "method": "\uf6a6",
@@ -85,12 +87,10 @@
   "diagnostic.errorSign": "\u2718",
   "diagnostic.warningSign": "\uf071",
   "diagnostic.infoSign": "\uf7fc",
-  //"diagnostic.hintSign": "\u0b90",
   "diagnostic.hintSign": "\uf835",
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
-  "diagnostic.virtualText": true,
-  "diagnostic.enableMessage": "never",
+  "diagnostic.autoRefresh": true,
+
   // list settings
   "list.source.grep.command": "rg",
 
