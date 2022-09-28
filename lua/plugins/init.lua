@@ -36,6 +36,15 @@ return require("packer").startup {
       end,
     }
 
+    use {
+      "nvim-treesitter/nvim-treesitter-context",
+      setup = function()
+        require("plugins.treesitter-context").setup()
+      end,
+    }
+
+    -- Awesome code context plugin
+
     -- Better way to show register content
     use {
       "tversteeg/registers.nvim",
