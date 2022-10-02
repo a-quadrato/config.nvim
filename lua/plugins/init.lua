@@ -20,13 +20,13 @@ return require("packer").startup {
     -- Lua Functions that you don't have to write yourself
     use { "wbthomason/packer.nvim" }
 
-    -- Better/Faster FileType detection
-    use {
-      "nathom/filetype.nvim",
-      setup = function()
-        require("plugins.filetype").setup()
-      end,
-    }
+    --  -- Better/Faster FileType detection */
+    --  use {
+    --    "nathom/filetype.nvim",
+    --    setup = function()
+    --      require("plugins.filetype").setup()
+    --    end,
+    --  }
     -- Easy way to interface with tree-sitter, an incremental parsing system.
     use {
       "nvim-treesitter/nvim-treesitter",
@@ -53,15 +53,6 @@ return require("packer").startup {
         require("plugins.registers").setup()
       end,
     }
-
-    -- use {
-    --   "lewis6991/gitsigns.nvim",
-    --   requires = { "nvim-lua/plenary.nvim" },
-    --   -- tag = 'release' -- To use the latest release
-    --   config = function()
-    --     require("gitsigns").setup()
-    --   end,
-    -- }
 
     -- better QuickFix window for NeoVim
     use { "kevinhwang91/nvim-bqf" }

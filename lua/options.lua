@@ -94,7 +94,7 @@ g.coc_snippet_next = "<Tab>"
 g.coc_snippet_prev = "<S-Tab>"
 
 -- Do not source the default filetype.vim - we use filetype.nvim
-g.did_load_filetypes = 0
+-- As of NeoVim 8.0, filetype.lua is the new default 👍
 g.do_filetype_lua = 1
 
 opt.foldmethod = "expr"
