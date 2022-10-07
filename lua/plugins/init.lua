@@ -43,20 +43,6 @@ return require("packer").startup {
       end,
     }
 
-    -- Awesome code context plugin
-
-    -- Better way to show register content
-    use {
-      "tversteeg/registers.nvim",
-      keys = { { "n", '"' }, { "i", "<c-r>" } },
-      config = function()
-        require("plugins.registers").setup()
-      end,
-    }
-
-    -- better QuickFix window for NeoVim
-    use { "kevinhwang91/nvim-bqf" }
-
     ---------------------------------------------------------------------------
     -- Visuals
     ---------------------------------------------------------------------------
@@ -152,9 +138,6 @@ return require("packer").startup {
     -- support for .enditorconfig
     use { "editorconfig/editorconfig-vim" }
 
-    -- R support for nvim
-    use { "jalvesaq/Nvim-R", branch = "stable" }
-
     -----------------------------------------------------------------------------
     -- Stuff from the allmighty tpope
     -----------------------------------------------------------------------------
@@ -195,29 +178,20 @@ return require("packer").startup {
     use {
       "pearofducks/ansible-vim",
       requires = { "nvim-treesitter/nvim-treesitter", "neoclide/coc.nvim" },
-      ft = { "yml", "yaml" },
+      ft = { "yaml.ansible", "ansible" },
       config = function()
         require("plugins.ansible").setup()
       end,
     }
 
-    -- Browse keymaps, commands and autocmds with ease
-    use {
-      "mrjones2014/legendary.nvim",
-      requires = { "stevearc/dressing.nvim" },
-      config = function()
-        require("plugins.legendary").config()
-      end,
-    }
-
     -- better vim.ui interface with Telescope 🔭 support
-    use {
-      "stevearc/dressing.nvim",
-      requires = { "nvim-telescope/telescope.nvim" },
-      config = function()
-        require("plugins.dressing").setup()
-      end,
-    }
+    -- use {
+    --   "stevearc/dressing.nvim",
+    --   requires = { "nvim-telescope/telescope.nvim" },
+    --   config = function()
+    --     require("plugins.dressing").setup()
+    --   end,
+    -- }
 
     -- An undo history visualizer
     use {

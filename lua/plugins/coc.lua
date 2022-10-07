@@ -50,7 +50,6 @@ local function setup()
     "coc-stylua",
     "coc-sumneko-lua",
     "coc-markdownlint",
-    "@yaegassy/coc-nginx",
     "coc-pairs",
     "coc-prettier",
     "coc-pyright",
