@@ -3,18 +3,17 @@
 -----------------------------------------------------------------------------
 local utils = require "utils.init"
 local aug = vim.api.nvim_create_augroup
-local au = vim.api.nvim_create_autocmd
 
 aug("Misc", { clear = true })
 
-au("BufWritePre", {
+vim.api.nvim_create_autocmd("BufWritePre", {
   group = "Misc",
   pattern = "*",
   callback = utils.strip_trailing_whitespaces,
 })
 
 -- highlight yank
-au("TextYankPost", {
+vim.api.nvim_create_autocmd("TextYankPost", {
   group = "Misc",
   pattern = "*",
   callback = function()
@@ -23,7 +22,7 @@ au("TextYankPost", {
 })
 
 -- open help on vertical split
-au("FileType", {
+vim.api.nvim_create_autocmd("FileType", {
   group = "Misc",
   pattern = "help",
   callback = function()
@@ -32,7 +31,7 @@ au("FileType", {
 })
 
 -- highligh when staying on word
-au("CursorHold", {
+vim.api.nvim_create_autocmd("CursorHold", {
   group = "Misc",
   pattern = "help",
   callback = function()
@@ -41,7 +40,7 @@ au("CursorHold", {
 })
 
 -- disable stupid auto commenting on new lines
-au("BufEnter", {
+vim.api.nvim_create_autocmd("BufEnter", {
   group = "Misc",
   pattern = "*",
   callback = function()
@@ -50,7 +49,7 @@ au("BufEnter", {
 })
 
 -- return to last edit position when opening files
-au("BufReadPost", {
+vim.api.nvim_create_autocmd("BufReadPost", {
   group = "Misc",
   pattern = "*",
   callback = function()
@@ -59,8 +58,8 @@ au("BufReadPost", {
 })
 
 -- enable Spelling for text files
-au("BufEnter", {
+vim.api.nvim_create_autocmd("FileType", {
   group = "Misc",
-  pattern = "*",
+  pattern = "txt,markdown,postscript,tex,latex",
   callback = utils.enable_spelling,
 })

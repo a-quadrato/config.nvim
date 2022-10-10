@@ -23,7 +23,7 @@ require("gruvbox").setup {
     CocDiagnosticsHint = { bg = colors.dark0_hard, fg = colors.bright_red },
     CocDiagnosticsWarning = { bg = colors.dark0_hard, fg = colors.bright_orange },
     CocDiagnosticsInfo = { bg = colors.dark0_hard, fg = colors.bright_blue },
-    ColorColumn = { bg = colors.dark0_hard },
+    -- ColorColumn = { bg = colors.dark0_hard },
     FgCocHintSignBgSignColumn = { bg = colors.dark1, fg = colors.bright_blue },
     Pmenu = { bg = colors.dark0_hard, fg = "white" },
     Comment = { italic = true }, -- popup menu colors

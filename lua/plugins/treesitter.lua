@@ -19,6 +19,17 @@ local function config()
       -- the name of the parser)
       -- list of language that will be disabled
       -- disable = { "c", "rust" },
+      disable = function(_, buf)
+        local max_filesize = 100 * 1024 -- 100 KB
+        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+        if ok and stats and stats.size > max_filesize then
+          return true
+        end
+        local filetype = vim.api.nvim_buf_get_option(buf, "filetype")
+        if ok and (filetype == "yaml.ansible" or filetype == "ansible") then
+          return true
+        end
+      end,
 
       -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
       -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
@@ -36,7 +47,6 @@ local function config()
       },
     },
   }
-  -- vim.cmd("TSDisable", "highlight", "[yaml.ansible]")
 end
 
 return {

@@ -1,8 +1,6 @@
 local opt = vim.opt
 local g = vim.g
 
---local options = require("core.utils").load_config().options
-
 opt.title = true
 opt.clipboard = "unnamedplus"
 opt.cul = false -- cursor line
@@ -78,7 +76,6 @@ opt.backup = false
 opt.swapfile = false
 opt.writebackup = false
 opt.cmdheight = 1
--- opt.signcolumn = "yes"
 
 opt.splitbelow = true
 opt.splitright = true
@@ -92,6 +89,7 @@ g.gruvbox_invert_selection = "0"
 
 g.coc_snippet_next = "<Tab>"
 g.coc_snippet_prev = "<S-Tab>"
+g.coc_filetype_map = { ["yaml.ansible"] = "ansible" }
 
 -- Do not source the default filetype.vim - we use filetype.nvim
 -- As of NeoVim 8.0, filetype.lua is the new default 👍
