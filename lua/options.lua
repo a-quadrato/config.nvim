@@ -98,3 +98,4 @@ g.do_filetype_lua = 1
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.foldlevelstart = 99
+opt.syntax = "off"
