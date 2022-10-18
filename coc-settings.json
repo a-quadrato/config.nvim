@@ -149,7 +149,7 @@
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "python.formatting.autopep8Args": ["--ignore=E402"],
 
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.0/clangd_14.0.0/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.1/clangd_15.0.1/bin/clangd",
   "ansible.enable": true,
 
   "sql.database": "postgresql",
