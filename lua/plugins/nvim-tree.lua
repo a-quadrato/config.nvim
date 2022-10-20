@@ -114,7 +114,7 @@ local function setup()
       },
     },
   }
-  map("", "F5", ":NvimTreeToggle<CR>")
+  map("", "<F5>", ":NvimTreeToggle<CR>")
 end
 
 return {

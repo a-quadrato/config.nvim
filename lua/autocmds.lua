@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- highligh when staying on word
+-- highlight when staying on word
 vim.api.nvim_create_autocmd("CursorHold", {
   group = "Misc",
   pattern = "help",
