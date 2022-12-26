@@ -9,8 +9,7 @@ end
 
 local function CocSmartTab()
   if vim.fn["coc#pum#visible"]() == 1 then
-    vim.fn["coc#pum#next"](1)
-    return termcodes ""
+    return termcodes "<C-r>" .. [[=coc#pum#next(1)]] .. termcodes "<CR>"
   elseif vim.fn["coc#expandableOrJumpable"]() == 1 then
     return termcodes "<C-r>" .. [[=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])]] .. termcodes "<CR>"
   else
@@ -53,7 +52,6 @@ local function setup()
     "coc-pairs",
     "coc-prettier",
     "coc-pyright",
-    "coc-rls",
     "coc-rust-analyzer",
     "coc-sh",
     "coc-snippets",
