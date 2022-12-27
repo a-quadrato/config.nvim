@@ -57,7 +57,7 @@ end
 
 local function enable_spelling()
   local ft = vim.bo.filetype
-  local spellable = { "markdown", "gitcommit", "txt", "liquid", "rst", "text" }
+  local spellable = { "markdown", "gitcommit", "txt", "liquid", "rst", "text", "latex", "tex" }
   if core.contains(spellable, ft) then
     vim.opt.spell = true
   else
