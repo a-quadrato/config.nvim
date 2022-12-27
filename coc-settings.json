@@ -14,6 +14,7 @@
   ],
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
+  "sumneko-lua.checkUpdate": false,
   "Lua.telemetry.enable": false,
   "Lua.diagnostics.enable": true,
   "Lua.diagnostics.globals": ["vim"],
@@ -49,8 +50,9 @@
   "suggest.timeout": 2000,
   "suggest.minTriggerInputLength": 1,
   "suggest.floatConfig": {
+    "maxHeight": 7,
     "border": true,
-    "rounded": true
+    "rounded": false
   },
   "suggest.labelMaxLength": 60,
   "suggest.completionItemKindLabels": {
@@ -130,7 +132,8 @@
   "yaml.schemaStore.enable": true,
   "yaml.schemas": {
     "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "docker-compose.@(yaml|yml)",
-    "https://json.schemastore.org/pre-commit-config.json": ".pre-commit-config.@(yaml|yml)"
+    "https://json.schemastore.org/pre-commit-config.json": ".pre-commit-config.@(yaml|yml)",
+    "https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json": ".gitlab-ci.@(yaml|yml)"
   },
   "yaml.format.enable": true,
   "yaml.completion": true,
@@ -149,10 +152,11 @@
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "python.formatting.autopep8Args": ["--ignore=E402"],
 
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.1/clangd_15.0.1/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
   "ansible.enable": true,
 
   "sql.database": "postgresql",
   "sql.formatOptions": { "--keywords": "upper" },
-  "golines.path": "/home/botand/.local/share/go/bin/golines"
+  "golines.path": "/home/botand/.local/share/go/bin/golines",
+  "snippets.ultisnips.pythonPrompt": false
 }
