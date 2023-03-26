@@ -113,6 +113,8 @@ local function config()
   )
 
   map("n", "<leader>gd", "<Plug>(coc-definition)")
+  map("n", "<leader>qf", "<Plug>(coc-fix-current)")
+  map("n", "<leader>a", "<Plug>(coc-code-action-selected)")
   map("n", "<leader>gy", "<Plug>(coc-type-definition)")
   map("n", "<leader>gi", "<Plug>(coc-implementation)")
   map("n", "<leader>gr", "<Plug>(coc-references)")
@@ -124,6 +126,7 @@ local function config()
   map("n", "<leader>cr", ":CocRestart")
   map("n", "<leader>s", ":call CocAction('format')<CR>")
   map("n", "<leader>cf", ":CocFix<CR>")
+  map("n", "<leader>cc", ":CocCommand")
 end
 
 return {

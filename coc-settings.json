@@ -95,6 +95,8 @@
 
   // list settings
   "list.source.grep.command": "rg",
+  "bibtex.enable": true,
+  "list.source.bibtex.files": ["./*.bib"],
 
   // git settings
   "git.topRemovedSign.text": "‾",
@@ -152,7 +154,7 @@
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "python.formatting.autopep8Args": ["--ignore=E402"],
 
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
   "ansible.enable": true,
 
   "sql.database": "postgresql",
