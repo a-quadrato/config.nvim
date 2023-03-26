@@ -217,6 +217,7 @@ return require("packer").startup {
         require("colorizer").setup()
       end,
     }
+    use { "Joakker/vim-antlr4" }
 
     if PackerBootstrap then
       require("packer").sync()
