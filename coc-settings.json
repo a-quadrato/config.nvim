@@ -1,4 +1,11 @@
 {
+  "inlayHint.enable": true,
+  "inlayHint.typeSeparator": "‣ ",
+  "inlayHint.parameterSeparator": "‣ ",
+  "codeLens.enable": true,
+  "codeLens.position": "top",
+  "codeLens.separator": "󰍉",
+  "codeLens.subseparator": " | ",
   "coc.preferences.enableMessageDialog": true,
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
@@ -32,6 +39,7 @@
   "java.jdt.ls.java.home": "/usr/lib/jvm/java-11-openjdk",
   "java.enabled": true,
   "java.format.enabled": false,
+  "java.referencesCodeLens.enabled": true,
   "xml.format.enabled": true,
   "xml.format.preservedNewlines": 2,
   //suggest settings
