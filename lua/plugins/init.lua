@@ -20,13 +20,6 @@ return require("packer").startup {
     -- Lua Functions that you don't have to write yourself
     use { "wbthomason/packer.nvim" }
 
-    --  -- Better/Faster FileType detection */
-    --  use {
-    --    "nathom/filetype.nvim",
-    --    setup = function()
-    --      require("plugins.filetype").setup()
-    --    end,
-    --  }
     -- Easy way to interface with tree-sitter, an incremental parsing system.
     use {
       "nvim-treesitter/nvim-treesitter",
@@ -162,7 +155,7 @@ return require("packer").startup {
     }
     -- Show location in source tree in status line
     use {
-      "SmiteshP/nvim-gps",
+      "SmiteshP/nvim-gps", -- this is deprecated but successor does not have coc support :cry_emoji:
       requires = "nvim-treesitter/nvim-treesitter",
       config = function()
         require("nvim-gps").setup()
@@ -171,9 +164,6 @@ return require("packer").startup {
 
     -- Some usefull snippets for a whole bunch of languages
     use { "honza/vim-snippets" }
-
-    -- Faster startup time
-    use { "lewis6991/impatient.nvim" }
 
     -- Ansible Plugin
     use {
@@ -184,15 +174,6 @@ return require("packer").startup {
         require("plugins.ansible").setup()
       end,
     }
-
-    -- better vim.ui interface with Telescope 🔭 support
-    -- use {
-    --   "stevearc/dressing.nvim",
-    --   requires = { "nvim-telescope/telescope.nvim" },
-    --   config = function()
-    --     require("plugins.dressing").setup()
-    --   end,
-    -- }
 
     -- An undo history visualizer
     use {

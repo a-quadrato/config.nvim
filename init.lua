@@ -10,6 +10,8 @@ if present then
   impatient.enable_profile()
 end
 
+vim.loader.enable()
+
 local modules = {
   "filetypes",
   "options",
