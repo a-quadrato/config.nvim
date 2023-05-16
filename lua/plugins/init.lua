@@ -48,7 +48,7 @@ return require("packer").startup {
     ---------------------------------------------------------------------------
 
     -- Fancy Icons
-    use { "kyazdani42/nvim-web-devicons" }
+    use { "nvim-tree/nvim-web-devicons" }
     use { "lervag/vimtex" }
     -- The one and only true colorscheme: GRUVBOOOOOOX
     use {
