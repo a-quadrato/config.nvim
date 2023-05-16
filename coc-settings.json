@@ -1,34 +1,27 @@
 {
-  "coc.preferences.snippetStatusText": "\u24c8",
   "coc.preferences.enableMessageDialog": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "html",
-    "css",
-    "json",
-    "markdown",
-    "python",
-    "golang",
-    "rust-analyzer",
-    "latex"
-  ],
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
   "sumneko-lua.checkUpdate": false,
   "Lua.telemetry.enable": false,
   "Lua.diagnostics.enable": true,
-  "Lua.diagnostics.globals": ["vim"],
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
   //"Lua.workspace.library": [
   //  {"vim.api.nvim_get_runtime_file": true
   //],
   "stylua.styluaPath": "/usr/bin/stylua",
-
   "texlab.build.onSave": true,
   "texlab.path": "/usr/bin/texlab",
   "texlab.build.executable": "latexmk",
   "texlab.forwardSearch.executable": "zathura",
   "texlab.build.forwardSearchAfter": true,
-  "texlab.forwardSearch.args": ["--synctex-forward", "%l:1%f", "%p"],
+  "texlab.forwardSearch.args": [
+    "--synctex-forward",
+    "%l:1%f",
+    "%p"
+  ],
   "texlab.build.args": [
     "-pdf",
     "-pvc",
@@ -36,7 +29,7 @@
     "-synctex=1",
     "%f"
   ],
-  "java.home": "/usr/lib/jvm/java-11-openjdk",
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-11-openjdk",
   "java.enabled": true,
   "java.format.enabled": false,
   "xml.format.enabled": true,
@@ -82,7 +75,6 @@
     "typeParameter": "\uf278",
     "default": "\uf29c"
   },
-
   //diagnostic settings
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": false,
@@ -92,12 +84,12 @@
   "diagnostic.hintSign": "\uf835",
   "diagnostic.checkCurrentLine": true,
   "diagnostic.autoRefresh": true,
-
   // list settings
   "list.source.grep.command": "rg",
   "bibtex.enable": true,
-  "list.source.bibtex.files": ["./*.bib"],
-
+  "list.source.bibtex.files": [
+    "./*.bib"
+  ],
   // git settings
   "git.topRemovedSign.text": "‾",
   "git.changeRemovedSign.text": "≃",
@@ -109,14 +101,11 @@
   "git.removedSign.hlGroup": "DiffDelete",
   "git.topRemovedSign.hlGroup": "DiffDelete",
   "git.changeRemovedSign.hlGroup": "DiffChange",
-
   // other stuff (language specific)
   "html.autoClosingTags": true,
-
   "sh.enable": true,
   "clangd.enabled": true,
   "clangd.checkUpdates": true,
-
   "tailwindCSS.cssLanguages": [
     "css",
     "less",
@@ -126,10 +115,13 @@
     "stylus",
     "vue"
   ],
-  "tailwindCSS.jsLanguages": ["javascript"],
-  "tailwindCSS.htmlLanguages": ["vue"],
+  "tailwindCSS.jsLanguages": [
+    "javascript"
+  ],
+  "tailwindCSS.htmlLanguages": [
+    "vue"
+  ],
   "tailwindCSS.emmetCompletions": true,
-
   "yaml.trace.server": "verbose",
   "yaml.schemaStore.enable": true,
   "yaml.schemas": {
@@ -142,7 +134,6 @@
   "yaml.format.printWidth": 80,
   "yaml.format.bracketSpacing": true,
   "yaml.validate": true,
-
   "jedi.enable": true,
   "jedi.trace.server": "verbose",
   "jedi.hover.enable": true,
@@ -152,13 +143,15 @@
   "python.linting.lintOnSave": true,
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
-  "python.formatting.autopep8Args": ["--ignore=E402"],
-
+  "python.formatting.autopep8Args": [
+    "--ignore=E402"
+  ],
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
   "ansible.enable": true,
-
   "sql.database": "postgresql",
-  "sql.formatOptions": { "--keywords": "upper" },
+  "sql.formatOptions": {
+    "--keywords": "upper"
+  },
   "golines.path": "/home/botand/.local/share/go/bin/golines",
   "snippets.ultisnips.pythonPrompt": false
 }
