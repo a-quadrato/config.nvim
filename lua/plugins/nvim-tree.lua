@@ -11,6 +11,7 @@ local function setup()
     open_on_tab = false,
     sort_by = "name",
     update_cwd = false,
+    sync_root_with_cwd = true,
     view = {
       width = 30,
       -- height = 30,
@@ -45,8 +46,9 @@ local function setup()
       auto_open = true,
     },
     update_focused_file = {
-      enable = false,
+      enable = true,
       update_cwd = false,
+      update_root = true,
       ignore_list = {},
     },
     system_open = {
@@ -54,8 +56,8 @@ local function setup()
       args = {},
     },
     diagnostics = {
-      enable = false,
-      show_on_dirs = false,
+      enable = true,
+      show_on_dirs = true,
       icons = {
         hint = "",
         info = "",
@@ -64,7 +66,7 @@ local function setup()
       },
     },
     filters = {
-      dotfiles = false,
+      dotfiles = true,
       custom = {},
       exclude = {},
     },
@@ -76,9 +78,9 @@ local function setup()
     actions = {
       use_system_clipboard = true,
       change_dir = {
-        enable = true,
+        enable = false,
         global = false,
-        restrict_above_cwd = false,
+        restrict_above_cwd = true,
       },
       open_file = {
         quit_on_open = false,
