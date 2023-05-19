@@ -35,7 +35,7 @@ vim.api.nvim_create_autocmd("CursorHold", {
   group = "Misc",
   pattern = "help",
   callback = function()
-    vim.cmd("call CocAction('highlight')", { silent = true })
+    vim.cmd "call CocAction('highlight')"
   end,
 })
 

@@ -5,12 +5,14 @@
 -- |_|_| |_|_|\__(_)_|\__,_|\__,_|
 
 local present, impatient = pcall(require, "impatient")
+local utils = require "utils.init"
 
 if present then
   impatient.enable_profile()
 end
 
-vim.loader.enable()
+utils.boostrap_lazy_nvim()
+--vim.loader.enable()
 
 local modules = {
   "filetypes",

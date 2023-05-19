@@ -48,7 +48,7 @@ end
 local function show_docs()
   local ft = vim.bo.filetype
   local cmd_index = vim.cmd("index(['vim','help']," .. ft .. ")")
-  if cmd_index.length >= 0 then
+  if cmd_index ~= nil and cmd_index.length >= 0 then
     print "cool"
   else
     print "Coc word"
@@ -69,6 +69,21 @@ local function termcodes(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
+local function bootstrap_lazy_nvim()
+  local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+  if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system {
+      "git",
+      "clone",
+      "--filter=blob:none",
+      "https://github.com/folke/lazy.nvim.git",
+      "--branch=stable", -- latest stable release
+      lazypath,
+    }
+  end
+  vim.opt.rtp:prepend(lazypath)
+end
+
 return {
   get_cwd = get_cwd,
   get_git_info = get_git_info,
@@ -78,4 +93,5 @@ return {
   map = map,
   enable_spelling = enable_spelling,
   termcodes = termcodes,
+  boostrap_lazy_nvim = bootstrap_lazy_nvim,
 }

@@ -161,5 +161,6 @@
     "--keywords": "upper"
   },
   "golines.path": "/home/botand/.local/share/go/bin/golines",
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "java.import.gradle.java.home": "/usr/lib/jvm/java-17-openjdk"
 }
