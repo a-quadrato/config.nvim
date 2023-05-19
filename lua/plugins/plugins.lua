@@ -89,7 +89,7 @@ return {
   {
     "neoclide/coc.nvim",
     branch = "release",
-    setup = function()
+    init = function()
       require("plugins.coc").setup()
     end,
     config = function()
