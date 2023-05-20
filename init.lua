@@ -12,7 +12,7 @@ if present then
 end
 
 utils.boostrap_lazy_nvim()
---vim.loader.enable()
+vim.loader.enable()
 
 local modules = {
   "filetypes",

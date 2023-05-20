@@ -10,11 +10,8 @@
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
   "sumneko-lua.checkUpdate": false,
-  "Lua.telemetry.enable": false,
   "Lua.diagnostics.enable": true,
-  "Lua.diagnostics.globals": [
-    "vim"
-  ],
+  "Lua.diagnostics.globals": ["vim"],
   //"Lua.workspace.library": [
   //  {"vim.api.nvim_get_runtime_file": true
   //],
@@ -24,11 +21,7 @@
   "texlab.build.executable": "latexmk",
   "texlab.forwardSearch.executable": "zathura",
   "texlab.build.forwardSearchAfter": true,
-  "texlab.forwardSearch.args": [
-    "--synctex-forward",
-    "%l:1%f",
-    "%p"
-  ],
+  "texlab.forwardSearch.args": ["--synctex-forward", "%l:1%f", "%p"],
   "texlab.build.args": [
     "-pdf",
     "-pvc",
@@ -57,31 +50,32 @@
   },
   "suggest.labelMaxLength": 60,
   "suggest.completionItemKindLabels": {
-    "function": "\uf794",
-    "method": "\uf6a6",
-    "variable": "\uf71b",
-    "constant": "\uf8ff",
-    "struct": "\ufb44",
-    "class": "\uf0e8",
-    "interface": "\ufa52",
-    "text": "\ue612",
-    "enum": "\uf435",
-    "enumMember": "\uf02b",
-    "module": "\uf668",
-    "color": "\ue22b",
-    "property": "\ufab6",
-    "field": "\uf93d",
-    "unit": "\uf475",
-    "file": "\uf471",
-    "value": "\uf8a3",
-    "event": "\ufacd",
-    "folder": "\uf115",
-    "keyword": "\uf893",
-    "snippet": "\uf64d",
-    "operator": "\uf915",
-    "reference": "\uf87a",
-    "typeParameter": "\uf278",
-    "default": "\uf29c"
+    "class": "  ",
+    "color": "  ",
+    "constant": "  ",
+    "constructor": "  ",
+    "default": "  ",
+    "enum": "  ",
+    "enumMember": "  ",
+    "event": "  ",
+    "field": "  ",
+    "file": "  ",
+    "folder": "  ",
+    "function": " 󰊕 ",
+    "interface": "  ",
+    "keyword": "  ",
+    "method": "  ",
+    "module": "  ",
+    "operator": "  ",
+    "property": "  ",
+    "reference": "  ",
+    "snippet": "  ",
+    "struct": "  ",
+    "text": "  ",
+    "typeParameter" :" tp",
+    "unit": "  ",
+    "value" : "  ",
+    "variable": "[]"
   },
   //diagnostic settings
   "diagnostic.displayByAle": false,
@@ -95,15 +89,13 @@
   // list settings
   "list.source.grep.command": "rg",
   "bibtex.enable": true,
-  "list.source.bibtex.files": [
-    "./*.bib"
-  ],
+  "list.source.bibtex.files": ["./*.bib"],
   // git settings
   "git.topRemovedSign.text": "‾",
   "git.changeRemovedSign.text": "≃",
-  "git.removedSign.text": "\uf873", // a fancy -
-  "git.addedSign.text": "+", // a fancy +
-  "git.changedSign.text": "\ufc23", // a fancy ~
+  "git.removedSign.text": "-",
+  "git.addedSign.text": "+",
+  "git.changedSign.text": "󰾞",
   "git.addedSign.hlGroup": "DiffAdd",
   "git.changedSign.hlGroup": "DiffChange",
   "git.removedSign.hlGroup": "DiffDelete",
@@ -123,12 +115,8 @@
     "stylus",
     "vue"
   ],
-  "tailwindCSS.jsLanguages": [
-    "javascript"
-  ],
-  "tailwindCSS.htmlLanguages": [
-    "vue"
-  ],
+  "tailwindCSS.jsLanguages": ["javascript"],
+  "tailwindCSS.htmlLanguages": ["vue"],
   "tailwindCSS.emmetCompletions": true,
   "yaml.trace.server": "verbose",
   "yaml.schemaStore.enable": true,
@@ -151,9 +139,7 @@
   "python.linting.lintOnSave": true,
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
-  "python.formatting.autopep8Args": [
-    "--ignore=E402"
-  ],
+  "python.formatting.autopep8Args": ["--ignore=E402"],
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
   "ansible.enable": true,
   "sql.database": "postgresql",

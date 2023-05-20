@@ -81,7 +81,8 @@ local function bootstrap_lazy_nvim()
       lazypath,
     }
   end
-  vim.opt.rtp:prepend(lazypath)
+  print("bootstrapping LAZY. Prepending lazypath.")
+  vim.opt.rtp:append(lazypath)
 end
 
 return {
