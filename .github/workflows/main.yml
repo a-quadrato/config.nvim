@@ -20,6 +20,6 @@ jobs:
     name: Luacheck linting
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Run Luacheck
         uses: RagedUnicorn/action-luacheck@v1.0.0
