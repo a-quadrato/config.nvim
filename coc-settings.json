@@ -30,6 +30,30 @@
     "-synctex=1",
     "%f"
   ],
+  "ltex.java.path": "/usr/lib/jvm/java-17-openjdk",
+  "ltex.enabled": [
+    "bibtex",
+    "context",
+    "context.tex",
+    "html",
+    "latex",
+    "markdown",
+    "org",
+    "restructuredtext",
+    "rsweave"
+  ],
+  "ltex.dictionary": {
+    "en-US": [
+      "adaptivity",
+      "precomputed",
+      "subproblem",
+      "~/.config/nvim/spell/en.utf-8.add"
+    ],
+    "de-DE": [
+      "B-Splines",
+      ":/path/to/externalFile.txt"
+    ]
+  },
   "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
   "java.enabled": true,
   "java.referencesCodeLens.enabled": true,
