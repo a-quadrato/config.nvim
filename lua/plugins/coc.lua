@@ -46,6 +46,7 @@ local function setup()
     "coc-html",
     "coc-jedi",
     "coc-json",
+    "coc-ltex",
     "coc-stylua",
     "coc-sumneko-lua",
     "coc-markdownlint",
@@ -69,6 +70,7 @@ local function setup()
 end
 
 local function config()
+  vim.g.coc_filetype_map = { ["yaml.ansible"] = "ansible", ["tex"] = "latex" }
   -- For more info see :h coc-completion and :h coc-completion-example
 
   -- When popup menu is visible, tab goes to next entry.

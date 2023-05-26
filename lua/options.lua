@@ -89,7 +89,6 @@ g.gruvbox_invert_selection = "0"
 
 g.coc_snippet_next = "<Tab>"
 g.coc_snippet_prev = "<S-Tab>"
-g.coc_filetype_map = { ["yaml.ansible"] = "ansible" }
 
 -- Do not source the default filetype.vim - we use filetype.nvim
 -- As of NeoVim 8.0, filetype.lua is the new default 👍
