@@ -17,6 +17,7 @@
   //],
   "stylua.styluaPath": "/usr/bin/stylua",
   "texlab.build.onSave": true,
+  "texlab.latexFormatter": "latexindent",
   "texlab.path": "/usr/bin/texlab",
   "texlab.build.executable": "latexmk",
   "texlab.forwardSearch.executable": "zathura",
@@ -29,9 +30,8 @@
     "-synctex=1",
     "%f"
   ],
-  "java.jdt.ls.java.home": "/usr/lib/jvm/java-11-openjdk",
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
   "java.enabled": true,
-  "java.format.enabled": false,
   "java.referencesCodeLens.enabled": true,
   "xml.format.enabled": true,
   "xml.format.preservedNewlines": 2,
@@ -72,18 +72,18 @@
     "snippet": "  ",
     "struct": "  ",
     "text": "  ",
-    "typeParameter" :" tp",
+    "typeParameter": " tp",
     "unit": "  ",
-    "value" : "  ",
+    "value": "  ",
     "variable": "[]"
   },
   //diagnostic settings
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": false,
-  "diagnostic.errorSign": "\u2718",
-  "diagnostic.warningSign": "\uf071",
-  "diagnostic.infoSign": "\uf7fc",
-  "diagnostic.hintSign": "\uf835",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
   "diagnostic.checkCurrentLine": true,
   "diagnostic.autoRefresh": true,
   // list settings
@@ -148,5 +148,8 @@
   },
   "golines.path": "/home/botand/.local/share/go/bin/golines",
   "snippets.ultisnips.pythonPrompt": false,
-  "java.import.gradle.java.home": "/usr/lib/jvm/java-17-openjdk"
+  "java.import.gradle.java.home": "/usr/lib/jvm/java-17-openjdk",
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true
 }
