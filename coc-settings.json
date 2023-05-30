@@ -30,7 +30,7 @@
     "-synctex=1",
     "%f"
   ],
-  "ltex.java.path": "/usr/lib/jvm/java-17-openjdk",
+  "ltex.java.path": $JAVA_HOME,
   "ltex.enabled": [
     "bibtex",
     "context",
@@ -54,7 +54,7 @@
       ":/path/to/externalFile.txt"
     ]
   },
-  "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
+  "java.jdt.ls.java.home": $JAVA_HOME,
   "java.enabled": true,
   "java.referencesCodeLens.enabled": true,
   "xml.format.enabled": true,
