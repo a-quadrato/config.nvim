@@ -18,6 +18,7 @@
   "stylua.styluaPath": "/usr/bin/stylua",
   "texlab.build.onSave": true,
   "texlab.latexFormatter": "latexindent",
+  "texlab.formatterLineLength": 80,
   "texlab.path": "/usr/bin/texlab",
   "texlab.build.executable": "latexmk",
   "texlab.forwardSearch.executable": "zathura",
@@ -30,7 +31,9 @@
     "-synctex=1",
     "%f"
   ],
-  "ltex.java.path": $JAVA_HOME,
+  "ltex.java.path": "$JAVA_HOME",
+  "ltex.statusBarItem": true,
+  "ltex.language": "en-US",
   "ltex.enabled": [
     "bibtex",
     "context",
@@ -44,13 +47,9 @@
   ],
   "ltex.dictionary": {
     "en-US": [
-      "adaptivity",
-      "precomputed",
-      "subproblem",
-      "~/.config/nvim/spell/en.utf-8.add"
+      ":~/.config/nvim/spell/en.utf-8.add"
     ],
     "de-DE": [
-      "B-Splines",
       ":/path/to/externalFile.txt"
     ]
   },
