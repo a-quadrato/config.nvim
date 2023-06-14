@@ -31,7 +31,7 @@
     "-synctex=1",
     "%f"
   ],
-  "ltex.java.path": "$JAVA_HOME",
+  "ltex.java.path": $JAVA_HOME,
   "ltex.statusBarItem": true,
   "ltex.language": "en-US",
   "ltex.enabled": [
@@ -53,9 +53,10 @@
       ":/path/to/externalFile.txt"
     ]
   },
-  "java.jdt.ls.java.home": $JAVA_HOME,
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
   "java.enabled": true,
   "java.referencesCodeLens.enabled": true,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
   "xml.format.enabled": true,
   "xml.format.preservedNewlines": 2,
   //suggest settings
@@ -75,8 +76,8 @@
   "suggest.completionItemKindLabels": {
     "class": "  ",
     "color": "  ",
-    "constant": "  ",
-    "constructor": "  ",
+    "constant": " 󰏿",
+    "constructor": "  ",
     "default": "  ",
     "enum": "  ",
     "enumMember": "  ",
@@ -86,16 +87,16 @@
     "folder": "  ",
     "function": " 󰊕 ",
     "interface": "  ",
-    "keyword": "  ",
+    "keyword": " 󰌋 ",
     "method": "  ",
     "module": "  ",
-    "operator": "  ",
+    "operator": " 󰆕 ",
     "property": "  ",
     "reference": "  ",
     "snippet": "  ",
     "struct": "  ",
     "text": "  ",
-    "typeParameter": " tp",
+    "typeParameter": " 󰊄 ",
     "unit": "  ",
     "value": "  ",
     "variable": "[]"
