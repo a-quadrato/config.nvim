@@ -111,9 +111,6 @@
   "diagnostic.checkCurrentLine": true,
   "diagnostic.autoRefresh": true,
   // list settings
-  "list.source.grep.command": "rg",
-  "bibtex.enable": true,
-  "list.source.bibtex.files": ["./*.bib"],
   // git settings
   "git.topRemovedSign.text": "‾",
   "git.changeRemovedSign.text": "≃",
