@@ -79,8 +79,6 @@ return {
   -- CMAKE syntax support
   { "pboettch/vim-cmake-syntax" },
 
-  -- run common Unix commands inside Vim
-  -- use { "tpope/vim-eunuch" }
   ---------------------------------------------------------------------------
   -- Functionality
   ---------------------------------------------------------------------------
@@ -135,6 +133,7 @@ return {
   -- A cool file explorer
   {
     "kyazdani42/nvim-tree.lua",
+    keys = { "<F5>" },
     dependencies = {
       "nvim-tree/nvim-web-devicons", -- optional, for file icon
     },
