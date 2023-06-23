@@ -1,21 +1,9 @@
 {
-  "coc.preferences.snippetStatusText": "\u24c8",
   "coc.preferences.enableMessageDialog": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "html",
-    "css",
-    "json",
-    "markdown",
-    "python",
-    "golang",
-    "rust-analyzer",
-    "latex"
-  ],
+  "coc.preferences.formatOnSave": true,
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
   "sumneko-lua.checkUpdate": false,
-  "Lua.telemetry.enable": false,
   "Lua.diagnostics.enable": true,
   "Lua.diagnostics.globals": ["vim"],
   //"Lua.workspace.library": [
@@ -36,9 +24,6 @@
     "-synctex=1",
     "%f"
   ],
-  "java.home": "/usr/lib/jvm/java-11-openjdk",
-  "java.enabled": true,
-  "java.format.enabled": false,
   "xml.format.enabled": true,
   "xml.format.preservedNewlines": 2,
   //suggest settings
@@ -50,7 +35,6 @@
   "suggest.timeout": 2000,
   "suggest.minTriggerInputLength": 1,
   "suggest.floatConfig": {
-    "maxHeight": 7,
     "border": true,
     "rounded": false
   },
@@ -92,11 +76,6 @@
   "diagnostic.hintSign": "\uf835",
   "diagnostic.checkCurrentLine": true,
   "diagnostic.autoRefresh": true,
-
-  // list settings
-  "list.source.grep.command": "rg",
-  "bibtex.enable": true,
-  "list.source.bibtex.files": ["./*.bib"],
 
   // git settings
   "git.topRemovedSign.text": "‾",
