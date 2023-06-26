@@ -181,5 +181,8 @@ return {
   },
 
   -- Fancy colors
-  { "Joakker/vim-antlr4", ft = { "anltr", "anltr4" } },
+  { "Joakker/vim-antlr4", ft = { "anltr", "anltr4" }, lazy = true },
+
+  -- support for typst
+  { "kaarmu/typst.vim", ft = { "typst" }, lazy = true },
 }
