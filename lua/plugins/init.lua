@@ -169,7 +169,7 @@ return require("packer").startup {
       end,
     }
 
-    -- Some usefull snippets for a whole bunch of languages
+    -- Some useful snippets for a whole bunch of languages
     use { "honza/vim-snippets" }
 
     -- Faster startup time
@@ -218,6 +218,9 @@ return require("packer").startup {
       end,
     }
     use { "Joakker/vim-antlr4" }
+
+    -- support for typst
+    use {'kaarmu/typst.vim', ft = {'typst'}}
 
     if PackerBootstrap then
       require("packer").sync()
