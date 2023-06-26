@@ -1,6 +1,14 @@
 {
   "coc.preferences.enableMessageDialog": true,
   "coc.preferences.formatOnSave": true,
+  "inlayHint.enable": true,
+  "inlayHint.typeSeparator": "‣ ",
+  "inlayHint.parameterSeparator": "‣ ",
+  "codeLens.enable": true,
+  "codeLens.position": "top",
+  "codeLens.separator": "󰍉",
+  "codeLens.subseparator": " | ",
+  "coc.preferences.enableMessageDialog": true,
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
   "sumneko-lua.checkUpdate": false,
@@ -10,8 +18,9 @@
   //  {"vim.api.nvim_get_runtime_file": true
   //],
   "stylua.styluaPath": "/usr/bin/stylua",
-
   "texlab.build.onSave": true,
+  "texlab.latexFormatter": "latexindent",
+  "texlab.formatterLineLength": 80,
   "texlab.path": "/usr/bin/texlab",
   "texlab.build.executable": "latexmk",
   "texlab.forwardSearch.executable": "zathura",
@@ -24,6 +33,32 @@
     "-synctex=1",
     "%f"
   ],
+  "ltex.java.path": $JAVA_HOME,
+  "ltex.statusBarItem": true,
+  "ltex.language": "en-US",
+  "ltex.enabled": [
+    "bibtex",
+    "context",
+    "context.tex",
+    "html",
+    "latex",
+    "markdown",
+    "org",
+    "restructuredtext",
+    "rsweave"
+  ],
+  "ltex.dictionary": {
+    "en-US": [
+      ":~/.config/nvim/spell/en.utf-8.add"
+    ],
+    "de-DE": [
+      ":/path/to/externalFile.txt"
+    ]
+  },
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk",
+  "java.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
   "xml.format.enabled": true,
   "xml.format.preservedNewlines": 2,
   //suggest settings
@@ -40,62 +75,58 @@
   },
   "suggest.labelMaxLength": 60,
   "suggest.completionItemKindLabels": {
-    "function": "\uf794",
-    "method": "\uf6a6",
-    "variable": "\uf71b",
-    "constant": "\uf8ff",
-    "struct": "\ufb44",
-    "class": "\uf0e8",
-    "interface": "\ufa52",
-    "text": "\ue612",
-    "enum": "\uf435",
-    "enumMember": "\uf02b",
-    "module": "\uf668",
-    "color": "\ue22b",
-    "property": "\ufab6",
-    "field": "\uf93d",
-    "unit": "\uf475",
-    "file": "\uf471",
-    "value": "\uf8a3",
-    "event": "\ufacd",
-    "folder": "\uf115",
-    "keyword": "\uf893",
-    "snippet": "\uf64d",
-    "operator": "\uf915",
-    "reference": "\uf87a",
-    "typeParameter": "\uf278",
-    "default": "\uf29c"
+    "class": "  ",
+    "color": "  ",
+    "constant": " 󰏿",
+    "constructor": "  ",
+    "default": "  ",
+    "enum": "  ",
+    "enumMember": "  ",
+    "event": "  ",
+    "field": "  ",
+    "file": "  ",
+    "folder": "  ",
+    "function": " 󰊕 ",
+    "interface": "  ",
+    "keyword": " 󰌋 ",
+    "method": "  ",
+    "module": "  ",
+    "operator": " 󰆕 ",
+    "property": "  ",
+    "reference": "  ",
+    "snippet": "  ",
+    "struct": "  ",
+    "text": "  ",
+    "typeParameter": " 󰊄 ",
+    "unit": "  ",
+    "value": "  ",
+    "variable": "[]"
   },
-
   //diagnostic settings
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": false,
-  "diagnostic.errorSign": "\u2718",
-  "diagnostic.warningSign": "\uf071",
-  "diagnostic.infoSign": "\uf7fc",
-  "diagnostic.hintSign": "\uf835",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
   "diagnostic.checkCurrentLine": true,
   "diagnostic.autoRefresh": true,
-
   // git settings
   "git.topRemovedSign.text": "‾",
   "git.changeRemovedSign.text": "≃",
-  "git.removedSign.text": "\uf873", // a fancy -
-  "git.addedSign.text": "+", // a fancy +
-  "git.changedSign.text": "\ufc23", // a fancy ~
+  "git.removedSign.text": "-",
+  "git.addedSign.text": "+",
+  "git.changedSign.text": "󰾞",
   "git.addedSign.hlGroup": "DiffAdd",
   "git.changedSign.hlGroup": "DiffChange",
   "git.removedSign.hlGroup": "DiffDelete",
   "git.topRemovedSign.hlGroup": "DiffDelete",
   "git.changeRemovedSign.hlGroup": "DiffChange",
-
   // other stuff (language specific)
   "html.autoClosingTags": true,
-
   "sh.enable": true,
   "clangd.enabled": true,
   "clangd.checkUpdates": true,
-
   "tailwindCSS.cssLanguages": [
     "css",
     "less",
@@ -108,7 +139,6 @@
   "tailwindCSS.jsLanguages": ["javascript"],
   "tailwindCSS.htmlLanguages": ["vue"],
   "tailwindCSS.emmetCompletions": true,
-
   "yaml.trace.server": "verbose",
   "yaml.schemaStore.enable": true,
   "yaml.schemas": {
@@ -121,7 +151,6 @@
   "yaml.format.printWidth": 80,
   "yaml.format.bracketSpacing": true,
   "yaml.validate": true,
-
   "jedi.enable": true,
   "jedi.trace.server": "verbose",
   "jedi.hover.enable": true,
@@ -132,12 +161,16 @@
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "python.formatting.autopep8Args": ["--ignore=E402"],
-
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
   "ansible.enable": true,
-
   "sql.database": "postgresql",
-  "sql.formatOptions": { "--keywords": "upper" },
+  "sql.formatOptions": {
+    "--keywords": "upper"
+  },
   "golines.path": "/home/botand/.local/share/go/bin/golines",
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "java.import.gradle.java.home": "/usr/lib/jvm/java-17-openjdk",
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true
 }

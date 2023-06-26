@@ -46,6 +46,7 @@ local function setup()
     "coc-html",
     "coc-jedi",
     "coc-json",
+    "coc-ltex",
     "coc-stylua",
     "coc-sumneko-lua",
     "coc-markdownlint",
@@ -69,6 +70,7 @@ local function setup()
 end
 
 local function config()
+  vim.g.coc_filetype_map = { ["yaml.ansible"] = "ansible", ["tex"] = "latex" }
   -- For more info see :h coc-completion and :h coc-completion-example
 
   -- When popup menu is visible, tab goes to next entry.
@@ -114,7 +116,12 @@ local function config()
 
   map("n", "<leader>gd", "<Plug>(coc-definition)")
   map("n", "<leader>qf", "<Plug>(coc-fix-current)")
-  map("n", "<leader>a", "<Plug>(coc-code-action-selected)")
+  map("n", "<leader>a", "<Plug>(coc-codeaction-cursor)")
+  map("n", "<leader>al", "<Plug>(coc-codeaction-line)")
+  map("n", "<leader>la", "<Plug>(coc-codelens-action)")
+  map("n", "<leader>re", "<Plug>(coc-codeaction-refactor)")
+  map("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)")
+  map("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)")
   map("n", "<leader>gy", "<Plug>(coc-type-definition)")
   map("n", "<leader>gi", "<Plug>(coc-implementation)")
   map("n", "<leader>gr", "<Plug>(coc-references)")

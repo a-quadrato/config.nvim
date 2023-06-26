@@ -1,7 +1,7 @@
 local status_line_bg = "#1d2021"
 local tree_fg = "#ebdbb2"
 
-local nvim_gps = require "nvim-gps"
+local navic = require "nvim-navic"
 local conditions = {
   buffer_not_empty = function()
     return vim.fn.empty(vim.fn.expand "%:t") ~= 1
@@ -52,8 +52,13 @@ local location = { "location", color = { gui = "bold" } }
 local progress = { "progress" }
 
 local gps = {
-  nvim_gps.get_location,
-  cond = nvim_gps.is_available,
+  function()
+    print "hello calling navic gps heloooo"
+    return navic.get_location()
+  end,
+  cond = function()
+    return navic.is_available()
+  end,
 }
 
 local diagnostics = {

@@ -1,18 +1,4 @@
-local fn = vim.fn
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-local PackerBootstrap
-if fn.empty(fn.glob(install_path)) > 0 then
-  PackerBootstrap = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-end
-
-return require("packer").startup {
+--[[ return require("packer").startup {
   function(use)
     -- Make Packer manage itself
     use { "nvim-lua/plenary.nvim" }
@@ -130,7 +116,7 @@ return require("packer").startup {
       "danymat/neogen",
       requires = "nvim-treesitter",
       config = [[require('plugins.neogen')]],
-      -- keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
+--[[      -- keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
     }
 
     -- move visual selection
@@ -234,3 +220,7 @@ return require("packer").startup {
     },
   },
 }
+]]
+local lazy_conf = require "plugins.lazy"
+local plugins_conf = require "plugins.plugins"
+require("lazy").setup(plugins_conf, lazy_conf)
