@@ -4,6 +4,7 @@
   "inlayHint.enable": true,
   "inlayHint.typeSeparator": "‣ ",
   "inlayHint.parameterSeparator": "‣ ",
+
   "codeLens.enable": true,
   "codeLens.position": "top",
   "codeLens.separator": "󰍉",

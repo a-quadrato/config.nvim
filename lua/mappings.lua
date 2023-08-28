@@ -46,9 +46,6 @@ map("n", "<leader>gs", ":G<CR>")
 map("n", "<leader>o", ":setlocal spell! spelllang=en_us<CR>")
 map("n", "<leader>z", "1z=<CR>")
 
--- Stop highlighting
-map("n", "<esc><esc>", ":noh<CR><esc>", { silent = true })
-
 map("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>")
 map("n", "<leader>q", ":bd<CR>")
 map("n", "<leader>w", ":w<CR>")
