@@ -1,5 +1,6 @@
 return {
   {
+    -- The one and only true colorscheme: GRUVBOOOOOOX
     "ellisonleao/gruvbox.nvim",
     lazy = false,
     priority = 1000,
@@ -21,8 +22,8 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter-context",
-    setup = function()
-      require("plugins.treesitter-context").setup()
+    config = function()
+      require("plugins.treesitter-context").config()
     end,
   },
 
@@ -33,14 +34,6 @@ return {
   -- Fancy Icons
   { "nvim-tree/nvim-web-devicons", lazy = false },
   { "lervag/vimtex", ft = { "tex" } },
-  -- The one and only true colorscheme: GRUVBOOOOOOX
-  {
-    "ellisonleao/gruvbox.nvim",
-    config = function()
-      require "plugins.gruvbox"
-    end,
-  },
-
   -- Indentation tracking
   { "lukas-reineke/indent-blankline.nvim" },
 
@@ -145,7 +138,7 @@ return {
   -- Show location in source tree in statuse {
   {
     "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig",
+    dependencies = "neovim/nvim-lspconfig",
     config = function()
       require("nvim-navic").setup()
     end,
@@ -185,4 +178,5 @@ return {
 
   -- support for typst
   { "kaarmu/typst.vim", ft = { "typst" }, lazy = true },
+  { "folke/zen-mode.nvim", cmd = { "ZenMode" }, opts = { plugins = { tmux = { enabled = true } } } },
 }

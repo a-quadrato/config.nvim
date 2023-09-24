@@ -1,5 +1,5 @@
 local tsc = require "treesitter-context"
-local function setup()
+local function config()
   tsc.setup {
     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
     max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -80,5 +80,5 @@ local function setup()
 end
 
 return {
-  setup = setup,
+  config = config,
 }

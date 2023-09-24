@@ -134,6 +134,7 @@ local function config()
   map("n", "<leader>s", ":call CocAction('format')<CR>")
   map("n", "<leader>cf", ":CocFix<CR>")
   map("n", "<leader>cc", ":CocCommand<CR>")
+  map("n", "<leader>cl", ":CocList<CR>")
 end
 
 return {
