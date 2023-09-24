@@ -30,10 +30,25 @@
   "texlab.build.args": [
     "-pdf",
     "-pvc",
+    "-shell-escape",
     "-interaction=nonstopmode",
     "-synctex=1",
     "%f"
   ],
+  "bibtex.enable": true,
+  "ltex.bibtex.fields": {
+    "maintitle": false,
+    "seealso": true,
+  },
+  "coc.source.bibtex.filetypes": [
+    "tex",
+    "plaintex",
+    "latex",
+    "pandoc",
+    "markdown"
+  ],
+  "texlab.bibtexFormatter": "texlab",
+
   "ltex.java.path": $JAVA_HOME,
   "ltex.statusBarItem": true,
   "ltex.language": "en-US",
