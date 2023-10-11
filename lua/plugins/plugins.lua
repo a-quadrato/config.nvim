@@ -122,6 +122,7 @@ return {
   -- Easily run Git commands from inside Vim
   { "tpope/vim-fugitive" },
   { "tpope/vim-dispatch" },
+  { "tpope/vim-repeat" },
 
   -- A cool file explorer
   {
@@ -179,4 +180,14 @@ return {
   -- support for typst
   { "kaarmu/typst.vim", ft = { "typst" }, lazy = true },
   { "folke/zen-mode.nvim", cmd = { "ZenMode" }, opts = { plugins = { tmux = { enabled = true } } } },
+
+  {
+    "glts/vim-radical",
+    dependencies = "glts/vim-magnum",
+  },
+
+  {
+    "glts/vim-magnum",
+    lazy = true,
+  },
 }
