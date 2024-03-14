@@ -15,20 +15,14 @@ local function setup()
     view = {
       width = 30,
       -- height = 30,
-      hide_root_folder = false,
       side = "left",
       preserve_window_proportions = false,
       number = true,
       relativenumber = false,
       signcolumn = "yes",
-      mappings = {
-        custom_only = false,
-        list = {
-          -- user mappings go here
-        },
-      },
     },
     renderer = {
+      root_folder_label = false,
       indent_markers = {
         enable = true,
         icons = {

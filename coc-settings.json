@@ -1,15 +1,14 @@
 {
   "coc.preferences.enableMessageDialog": true,
-  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnSave": false,
   "inlayHint.enable": true,
-  "inlayHint.typeSeparator": "‣ ",
-  "inlayHint.parameterSeparator": "‣ ",
+ // "inlayHint.typeSeparator": "‣ ",
+ // "inlayHint.parameterSeparator": "‣ ",
 
   "codeLens.enable": true,
   "codeLens.position": "top",
   "codeLens.separator": "󰍉",
   "codeLens.subseparator": " | ",
-  "coc.preferences.enableMessageDialog": true,
   "sumneko-lua.enable": true,
   "sumneko-lua.enableNvimLuaDev": true,
   "sumneko-lua.checkUpdate": false,
@@ -142,7 +141,8 @@
   "html.autoClosingTags": true,
   "sh.enable": true,
   "clangd.enabled": true,
-  "clangd.checkUpdates": true,
+  "clangd.checkUpdates": false,
+  "clangd.path": "/usr/bin/clangd",
   "tailwindCSS.cssLanguages": [
     "css",
     "less",
@@ -177,7 +177,6 @@
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Path": "/usr/bin/autopep8",
   "python.formatting.autopep8Args": ["--ignore=E402"],
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
   "ansible.enable": true,
   "sql.database": "postgresql",
   "sql.formatOptions": {
